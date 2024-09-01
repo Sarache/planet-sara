@@ -12,18 +12,17 @@ useHead({
 <template>
   <main>
     <hero />
-    <clipart />
     <br />
     <InfiniteSlider />
   </main>
-
-  <div class="cardproject"></div>
 </template>
 
 <style lang="scss" scoped>
 @import "../assets/scss/grid.scss";
 
 main {
+  width: 100%;
+  height:100%;
   display: flex;
   flex-direction: row;
 

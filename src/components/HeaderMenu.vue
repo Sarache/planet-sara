@@ -4,26 +4,26 @@
 			<li>
 				<menuitem>
 					<router-link to="/">
-						<img class="logo" src="/public/img/title-planet-Sara.png" alt="Home" />
+<h5>Planet Sara</h5>
 					</router-link>
 				</menuitem>
 			</li>
-			<li :class="{ 'has-submenu': true, 'submenu-active': isSubmenuActive }">
-				<menuitem><router-link to="/about">About me</router-link></menuitem>
-				<ul class="submenu">
-					<li><router-link to="/about/thehuman">The human</router-link></li>
-					<li><router-link to="/about/thedesigner">The designer</router-link></li>
-				</ul>
+
+			<li>
+<p>✦</p>
 			</li>
+
 			<li>
 				<menuitem><router-link to="/designportfolio">Design Portfolio</router-link></menuitem>
 			</li>
 			<li>
-				<menuitem><router-link to="/creativeportfolio">Creative Portfolio</router-link></menuitem>
+<p>✦</p>
 			</li>
+
 			<li>
 				<menuitem><router-link to="/contact">Contact</router-link></menuitem>
 			</li>
+
 		</ul>
 	</div>
 </template>
@@ -42,16 +42,15 @@ export default {
 @import "../assets/scss/_variables.scss";
 
 .headerbg {
-	background: rgba($color: $off-black, $alpha: 0.2);
-	box-shadow: 8px 8px 77px 0px rgb(6, 9, 18);
-	backdrop-filter: blur(10px);
-	outline: 1px solid $gray-600;
+	background: $plum-100;
+border-radius: 0 0 2rem 2rem;
 	display: flex;
+	flex-direction: row;
+	justify-content: center;
 	margin: 0;
-	width: 20rem;
-	height: 100%;
 	position: fixed;
 	top: 0;
+	left: 25%;
 	z-index: 5;
 
 	@media (max-width: 1200px) {
@@ -62,9 +61,13 @@ export default {
 
 ul {
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	width: 100%;
-	justify-content: center;
+align-items: center;
+	gap: 1rem;
+	color: $plum-dark;
+	padding: 1rem 2rem;
+
 
 	@media (max-width: 1200px) {
 		flex-direction: row;
@@ -80,78 +83,26 @@ ul {
 	}
 
 	li {
-		display: inline;
-		padding: 1rem 0;
+		
 
-		&.has-submenu {
-			position: relative;
+		a {
+			font-family: Red Hat Mono;
+			font-style: normal;
+			font-weight: 200;
+			font-size: 1rem;
+			color: $plum-dark;
 
-			.submenu {
-				max-height: 0;
-				overflow: hidden;
-				transition: max-height 0.5s ease;
-				list-style: none;
-				display: flex;
-				padding: 0;
-
-				@media (max-width: 1200px) {
-					max-height: auto;
-					max-width: 0;
-				}
-
-				li {
-					margin: 0;
-					font-family: Figtree;
-					display: flex;
-					padding: 0.25rem;
-					a {
-						font-size: 1rem;
-						font-weight: 500;
-						text-transform: uppercase;
-						color: $off-white;
-					}
-
-					&:hover a {
-						letter-spacing: 3pt;
-						font-weight: 600;
-						transition: letter-spacing 0.5s ease, color 0.5 ease;
-					}
-				}
-			}
-
-			&.submenu-active .submenu {
-				max-height: 300px;
-			}
-
-			&:hover .submenu {
-				display: block;
-				max-height: 300px;
-			}
+		}
+		p {
+			color: $plum-dark;
 		}
 
-		.logo {
-			height: 8rem;
-			display: flex;
-			align-self: center;
+		h5 {
+			color: $plum-dark;
+			font-weight: 900;
 
-			@media (max-width: 1200px) {
-				width: 3rem;
-			}
-
-			&:hover {
-				animation: rotationlogo 2s ease 0s 1 normal forwards;
-
-				@keyframes rotationlogo {
-					0% {
-						transform: rotate(0);
-					}
-
-					100% {
-						transform: rotate(360deg);
-					}
-				}
-			}
 		}
+
 	}
 }
 </style>

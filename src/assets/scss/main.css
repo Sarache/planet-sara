@@ -78,23 +78,18 @@ html {
 body {
   transition: color 0.5s, background-color 0.5s;
   line-height: 1.6;
-  font-family: "Figtree";
+  font-family: "Red Hat Mono";
   font-weight: regular;
   font-size: 1.1rem;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: rgba(16, 20, 25, 0.7843137255);
-  background: url("../ /img/bgfilter.png") repeat fixed 10% 10%;
   background-size: 90%;
 }
 
-bodyItalic {
-  font-family: Bensley;
-}
-
 menuitem {
-  font-family: Besley;
+  font-family: Victor Mono;
   font-size: 1.2rem;
   font-style: italic;
   line-height: 1.25rem; /* 125% */
@@ -102,9 +97,9 @@ menuitem {
 }
 
 h1 {
-  font-family: Space Grotesk;
+  font-family: Victor Mono;
   font-size: 3.5rem;
-  font-style: normal;
+  font-style: italic;
   font-weight: bold;
   line-height: 4rem; /* 114.286% */
   margin-bottom: -1rem;
@@ -125,7 +120,7 @@ h2 {
 h3 {
   font-size: 2rem;
   font-weight: 500;
-  font-family: Figtree;
+  font-family: Red Hat Mono;
   font-size: 3rem;
   font-style: normal;
   font-weight: 200;
@@ -134,7 +129,7 @@ h3 {
 }
 
 .subtitle {
-  font-family: Figtree;
+  font-family: Red Hat Mono;
   font-size: 1rem;
   font-style: normal;
   font-weight: 900;

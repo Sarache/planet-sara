@@ -122,7 +122,7 @@ export default {
 		right: 2rem;
 		transition: opacity 0.5s;
 		line-height: 1.2;
-		font-family: "Figtree";
+		font-family: "Red Hat Mono";
 		font-weight: regular;
 		font-size: 1.2rem;
 		text-rendering: optimizeLegibility;
@@ -180,7 +180,7 @@ export default {
 
 				background: $off-black;
 				color: $blue-200;
-				font-family: Figtree;
+				font-family: Red Hat Mono;
 				text-transform: uppercase;
 				font-size: 1rem;
 				font-weight: 800;

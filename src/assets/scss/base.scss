@@ -19,7 +19,7 @@ li {
 
 html {
 	scroll-behavior: smooth;
-	background-color: $off-black;
+	background-color: $plum;
 	cursor: url("/pointer-default.svg"), auto;
 }
 
@@ -324,7 +324,7 @@ html {
 
 body {
 	transition: color 0.5s, background-color 0.5s;
-	font-family: "Figtree";
+	font-family: "Red Hat Mono";
 	font-weight: 300;
 	font-size: 1.5rem;
 	text-rendering: optimizeLegibility;
@@ -335,7 +335,7 @@ body {
 .bodysmall {
 	transition: color 0.5s, background-color 0.5s;
 	line-height: 1.2;
-	font-family: "Figtree";
+	font-family: "Red Hat Mono";
 	font-weight: regular;
 	font-size: 1.2rem;
 	text-rendering: optimizeLegibility;
@@ -344,7 +344,7 @@ body {
 }
 
 strong {
-	font-family: Besley;
+	font-family: Victor Mono;
 	font-size: 1.5rem;
 	font-style: italic;
 	font-weight: 600;
@@ -354,7 +354,7 @@ strong {
 }
 
 menuitem {
-	font-family: Besley;
+	font-family: Victor Mono;
 	font-size: 1.6rem;
 	font-style: italic;
 	line-height: 1.25rem;
@@ -375,20 +375,19 @@ menuitem {
 	-webkit-text-fill-color: transparent;
 	display: inline;
 	width: 100%;
+	font-weight: 100;
+	letter-spacing: -3pt;
+	font-family: Victor Mono;
+
 }
 
 h1 {
-	font-family: Space Grotesk;
-	font-size: 4rem;
-	font-style: normal;
-	font-weight: bold;
+	font-family: Victor Mono;
+	font-size: 3.2rem;
+	font-style: italic;
+	font-weight: 100;
 	line-height: 4rem;
 	/* 114.286% */
-	margin-bottom: -1rem;
-	background: $gradfull;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	display: inline;
 
 	@media (max-width: 600px) {
 		font-size: 2.5rem;
@@ -405,7 +404,7 @@ h2 {
 h3 {
 	font-size: 2.5rem;
 	font-weight: 500;
-	font-family: Figtree;
+	font-family: Red Hat Mono;
 	font-size: 3rem;
 	font-style: normal;
 	font-weight: 200;
@@ -415,7 +414,7 @@ h3 {
 }
 
 h4 {
-	font-family: Besley;
+	font-family: Victor Mono;
 	font-size: 2rem;
 	font-style: italic;
 	font-weight: 600;
@@ -429,18 +428,18 @@ h4 {
 }
 
 h5 {
-	font-family: Besley;
-	font-size: 1.5rem;
+	font-family: Victor Mono;
+	font-size: 1.2rem;
 	font-style: italic;
-	font-weight: 600;
+	font-weight: 900;
 	line-height: 1.5rem;
 	/* 109.091% */
-	letter-spacing: -0.03438rem;
+	letter-spacing: -0.1rem;
 	color: $blue-200;
 }
 
 h6 {
-	font-family: Figtree;
+	font-family: Red Hat Mono;
 	font-size: 1.7rem;
 	font-style: normal;
 	font-weight: 700;
@@ -451,7 +450,7 @@ h6 {
 }
 
 subtitle {
-	font-family: Figtree;
+	font-family: Red Hat Mono;
 	font-size: 1.24rem;
 	font-weight: 900;
 	line-height: 1.5rem;
@@ -501,7 +500,8 @@ img {
 main {
 	font-weight: normal;
 
-	padding: 4rem 4rem 4rem 24rem;
+	width: 100%;
+	height: 100%;
 }
 
 @media (max-width: $br-desktop) {
@@ -689,108 +689,5 @@ footer {
 
 	100% {
 		transform: translateX(-50%) translateY(-10%);
-	}
-}
-
-.gradient-bg {
-	width: 100vw;
-	height: 100vh;
-	position: fixed;
-	overflow: hidden;
-	top: 0;
-	left: 0;
-	z-index: -1;
-
-	svg {
-		display: none;
-	}
-
-	.gradient-container {
-		width: 100%;
-		height: 100%;
-		mix-blend-mode: screen;
-		z-index: -3;
-	}
-
-	.g1 {
-		position: absolute;
-		background: radial-gradient(circle at center, rgba(var(--color1), 0.8) 0, rgba(var(--color1), 0) 50%) no-repeat;
-		width: var(--circle-size);
-		height: var(--circle-size);
-		mix-blend-mode: var(--blending);
-		top: calc(50% - var(--circle-size) / 2 + 200px);
-		left: calc(50% - var(--circle-size) / 2 - 500px);
-		opacity: 1;
-
-		transform-origin: center center;
-		animation: moveVertical 30s ease infinite;
-	}
-
-	.g2 {
-		position: absolute;
-		background: radial-gradient(circle at center, rgba(var(--color2), 0.8) 0, rgba(var(--color2), 0) 50%) no-repeat;
-		width: var(--circle-size);
-		height: var(--circle-size);
-		mix-blend-mode: var(--blending);
-		top: calc(50% - var(--circle-size) * 2);
-		left: calc(50% - var(--circle-size) * 2);
-
-		transform-origin: calc(50% + 400px);
-		animation: moveInCircle 40s linear infinite;
-
-		opacity: 0.7;
-	}
-
-	.g3 {
-		position: absolute;
-		background: radial-gradient(circle at center, rgba(var(--color1), 0.8) 0, rgba(var(--color5), 0) 50%) no-repeat;
-		width: var(--circle-size);
-		height: var(--circle-size);
-		mix-blend-mode: var(--blending);
-		top: calc(50% - var(--circle-size) / 2);
-		left: calc(50% - var(--circle-size) / 2);
-		opacity: 0.7;
-
-		transform-origin: calc(50% - 200px);
-		animation: moveHorizontal 40s ease infinite;
-	}
-
-	.g4 {
-		position: absolute;
-		background: radial-gradient(circle at center, rgba(var(--color2), 0.8) 0, rgba(var(--color5), 0) 50%) no-repeat;
-		width: calc(var(--circle-size) * 2);
-		height: calc(var(--circle-size) * 2);
-		mix-blend-mode: var(--blending);
-		top: calc(50% - var(--circle-size) / 2);
-		left: calc(50% - var(--circle-size) / 2);
-		opacity: 1;
-
-		transform-origin: calc(50% - 800px) calc(50% + 200px);
-		animation: moveInCircle 20s ease infinite;
-	}
-
-	.g5 {
-		position: absolute;
-		background: radial-gradient(circle at center, rgba(var(--color5), 0.8) 0, rgba(var(--color5), 0) 50%) no-repeat;
-		width: var(--circle-size);
-		height: var(--circle-size);
-		mix-blend-mode: var(--blending);
-		top: calc(50% - var(--circle-size) / 2 - 500px);
-		left: calc(50% - var(--circle-size) / 2 + 200px);
-		opacity: 1;
-
-		transform-origin: calc(50% + 400px);
-		animation: moveInCircle 40s linear infinite;
-	}
-
-	.interactive {
-		position: absolute;
-		background: radial-gradient(circle at center, rgba(var(--color1), 0.8) 0, rgba(var(--color2), 0) 50%) no-repeat;
-		mix-blend-mode: screen;
-		opacity: 0.4;
-		width: 50%;
-		height: 50%;
-		top: -25%;
-		left: -25%;
 	}
 }

@@ -103,7 +103,7 @@ a {
 			border-radius: 4.375rem;
 			background: var(--Blue-sky, #5146cf);
 			color: var(--off-white, #9fc8d9);
-			font-family: Besley;
+			font-family: Victor Mono;
 			font-size: 1rem;
 			font-style: italic;
 			font-weight: 400;
