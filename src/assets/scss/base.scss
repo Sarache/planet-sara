@@ -19,16 +19,26 @@ li {
 
 html {
 	scroll-behavior: smooth;
-	background-color: $plum;
 	cursor: url("/pointer-default.svg"), auto;
-}
-
-
-
-.pagecontent {
-	width: 100%;
 	height: 100%;
+
+	body {
+		height: 100%;
+		background: $plum;
+
+
+		
+
+	}
 }
+.app {
+
+
+
+
+		}
+
+
 .aboutcontent {
 	display: flex;
 	flex-direction: column;
@@ -108,9 +118,7 @@ html {
 
 		.subtitle {
 			position: relative;
-			background: linear-gradient(90deg, #dee1ab 0%, #fae2af 50%, #c15544 100%);
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
+			background: $yellow-400;
 			text-align: center;
 		}
 	}
@@ -282,7 +290,6 @@ html {
 		opacity: 100%;
 
 		&:hover {
-			color: $off-white;
 			font-size: 3rem;
 		}
 	}
@@ -376,13 +383,10 @@ menuitem {
 }
 
 .hero {
-	background: $gradfull;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	display: inline;
+	color: $yellow-400;
 	width: 100%;
 	font-weight: 100;
-	letter-spacing: -3pt;
+	letter-spacing: -3.5pt;
 	font-family: Victor Mono;
 
 }
@@ -488,33 +492,17 @@ b {
 
 a {
 	text-decoration: none;
-	color: $plum;
 	font-weight: 600;
 	transition: 0.2s;
 
 	&:hover {
-		background: linear-gradient(90deg, #dee1ab 0%, #c15544 50%, #5146cf 100%);
-		background-clip: text;
-		-webkit-background-clip: text;
+		color: $yellow;
+		
 		cursor: url("/public/pointer-hover.svg"), auto;
 	}
 }
 
-img {
-}
 
-main {
-	font-weight: normal;
-
-	width: 100%;
-	height: 100%;
-}
-
-@media (max-width: $br-desktop) {
-	main {
-		margin: auto 0.7rem;
-	}
-}
 
 section {
 	margin: 6rem 0;

@@ -13,20 +13,26 @@
 <script></script>
 <style lang="scss" scoped>
 @import "../assets/scss/_variables.scss";
+
+
 div {
-	margin: 10% 0;
 	display: flex;
-	flex-direction: column;
-	flex-wrap: -2rem;
-	margin-right: -2rem;
+    flex-direction: column;
+    align-self: center; /* Center the div within its parent if needed */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    flex-wrap: wrap; /* Flex-wrap to manage how items are wrapped */
+    height: auto; /* Ensure the div height fits its content */
+
+
+
 	@media (max-width: 1000px) {
 		font-size: 2rem;
-		margin: 1rem;
 	}
 }
 
 .regular {
-	-webkit-text-fill-color: $off-white;
+	color: $yellow-400;
 	font-family: Red Hat Mono;
 	font-size: 2.2rem;
 	font-style: normal;

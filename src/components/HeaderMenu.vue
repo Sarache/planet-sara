@@ -4,26 +4,25 @@
 			<li>
 				<menuitem>
 					<router-link to="/">
-<h5>Planet Sara</h5>
+						<h5>Planet Sara</h5>
 					</router-link>
 				</menuitem>
 			</li>
 
 			<li>
-<p>✦</p>
+				<p>✦</p>
 			</li>
 
 			<li>
 				<menuitem><router-link to="/designportfolio">Design Portfolio</router-link></menuitem>
 			</li>
 			<li>
-<p>✦</p>
+				<p>✦</p>
 			</li>
 
 			<li>
-				<menuitem><router-link to="/contact">Contact</router-link></menuitem>
+				<menuitem><router-link to="/contact">Resume</router-link></menuitem>
 			</li>
-
 		</ul>
 	</div>
 </template>
@@ -42,16 +41,16 @@ export default {
 @import "../assets/scss/_variables.scss";
 
 .headerbg {
-	background: $plum-100;
-border-radius: 0 0 2rem 2rem;
+	background: $plum-dark;
+	border-radius: 0 0 2rem 2rem;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
 	margin: 0;
 	position: fixed;
 	top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+	left: 50%;
+	transform: translateX(-50%);
 	z-index: 5;
 
 	@media (max-width: 1200px) {
@@ -64,11 +63,10 @@ ul {
 	display: flex;
 	flex-direction: row;
 	width: 100%;
-align-items: center;
+	align-items: center;
 	gap: 1rem;
 	color: $plum-dark;
-	padding: 1rem 2rem;
-
+	padding: .6rem 3rem;
 
 	@media (max-width: 1200px) {
 		flex-direction: row;
@@ -84,26 +82,34 @@ align-items: center;
 	}
 
 	li {
-		
-
 		a {
 			font-family: Red Hat Mono;
 			font-style: normal;
 			font-weight: 200;
 			font-size: 1rem;
-			color: $plum-dark;
+			color: $plum;
+			
 
+			&:hover {
+				color: $yellow;
+			}
 		}
 		p {
-			color: $plum-dark;
+			color: $plum;
 		}
 
 		h5 {
-			color: $plum-dark;
 			font-weight: 900;
-
+			transition: 01s;
+			color: $plum;
+			&:hover {
+				color: $yellow;
+			}
 		}
 
+		&:hover {
+			color: $yellow;
+		}
 	}
 }
 </style>

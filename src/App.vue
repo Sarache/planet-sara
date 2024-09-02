@@ -5,12 +5,13 @@ import Background from "./components/background.vue"
 </script>
 <template>
 	<HeaderMenu />
-	<div class="pagecontent">
-		<RouterView />
+	<div ref="pageContainer" class="pagecontainer" @mousemove="handleMouseMove">
+		<div ref="pageContent" class="pagecontent">
+			<RouterView />
+		</div>
 	</div>
-	<Background>
 
-	</Background>
+	<Background> </Background>
 </template>
 
 <script>
@@ -45,9 +46,40 @@ export default {
 				this.tgY = event.clientY
 			})
 		},
+		handleMouseMove(event) {
+			// Access the elements using refs
+			const container = this.$refs.pageContainer
+			const content = this.$refs.pageContent
+
+			// Get mouse position relative to the center of the container
+			const rect = container.getBoundingClientRect()
+			const mouseX = event.clientX - rect.left - rect.width / 2
+			const mouseY = event.clientY - rect.top - rect.height / 2
+
+			// Calculate rotation angles
+			const rotateX = (mouseY / rect.height) * -20 // Adjust -20 to control vertical tilt
+			const rotateY = (mouseX / rect.width) * 20 // Adjust 20 to control horizontal tilt
+
+			// Apply rotation
+			content.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`
+		},
 	},
 }
 </script>
-<style>
+<style lang="scss" scoped>
+.pagecontainer {
+	perspective: 1000px; /* Control the depth of the 3D effect */
+	display: flex;
+	justify-content: center;
+	align-items: center;
 
+	.pagecontent {
+		transform-style: preserve-3d; /* Enable 3D transforms */
+		transition: transform 0.1s ease-out; /* Smooth transition */
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		overflow: hidden;
+	}
+}
 </style>

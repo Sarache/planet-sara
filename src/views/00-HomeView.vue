@@ -12,19 +12,21 @@ useHead({
   <main>
     <hero />
     <br />
-    <InfiniteSlider />
+    <!-- <InfiniteSlider /> -->
   </main>
 </template>
 
 <style lang="scss" scoped>
 @import "../assets/scss/grid.scss";
 
-main {
-  width: 100%;
-  height:100%;
-  display: flex;
-  flex-direction: row;
 
+main {
+  display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    min-height: 100vh; /* Ensure the main container takes full viewport height */
+    padding: 4rem; /* Optional: adjust padding as needed */
   @media (max-width: 1000px) {
     flex-direction: column;
   }

@@ -170,10 +170,8 @@ a {
   transition: 0.2s;
 }
 a:hover {
-  background: linear-gradient(90deg, #dee1ab 0%, #c15544 50%, #5146cf 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background: $yellow;
+
 }
 
 img {
