@@ -2,6 +2,7 @@
   "name": "planet-sara-portfolio",
   "version": "1.0.0",
   "description": "Planet Sara - Design Portfolio",
+  "main": "index.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
