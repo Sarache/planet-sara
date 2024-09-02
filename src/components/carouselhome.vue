@@ -21,9 +21,6 @@ export default {
         { class: 'b', background: 'url("././img/Sarache_About_2.png")' },
         { class: 'c', background: 'url(".//img/Sarache_About_3.png")' },
         { class: 'd', background: 'url("././/img/Sarache_Design_1.png")' },
-        // Uncomment and update paths as needed
-        // { class: 'e', background: 'url("/porchfolio/public/img/Sarache_About_5.png")' },
-        // { class: 'f', background: 'url("/porchfolio/public/img/Sarache_About_6.png")' }
       ]
     };
   },

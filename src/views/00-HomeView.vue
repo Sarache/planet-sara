@@ -1,6 +1,5 @@
 <script setup>
 import hero from "@/components/hero.vue";
-import clipart from "@/components/clipart.vue";
 import InfiniteSlider from "@/components/InfiniteSlider.vue";
 import { useHead } from "@unhead/vue";
 

@@ -50,7 +50,8 @@ border-radius: 0 0 2rem 2rem;
 	margin: 0;
 	position: fixed;
 	top: 0;
-	left: 25%;
+    left: 50%;
+    transform: translateX(-50%);
 	z-index: 5;
 
 	@media (max-width: 1200px) {
