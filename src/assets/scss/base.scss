@@ -24,7 +24,6 @@ html {
 
 	body {
 		height: 100%;
-		background: $plum;
 
 
 		
@@ -449,9 +448,9 @@ h5 {
 }
 
 h6 {
-	font-family: Red Hat Mono;
-	font-size: 1.7rem;
-	font-style: normal;
+	font-family: Victor Mono;
+	font-size: 1.1rem;
+	font-style: italic;
 	font-weight: 700;
 	line-height: 2rem;
 	/* 133.333% */
@@ -466,6 +465,12 @@ subtitle {
 	line-height: 1.5rem;
 	/* 114.286% */
 	text-transform: uppercase;
+}
+
+.caption {
+	font-family: Red Hat Mono;
+	font-weight: 100;
+	font-size: 1rem;
 }
 
 @media screen and (max-width: $br-mobile) {

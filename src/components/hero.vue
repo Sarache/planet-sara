@@ -10,7 +10,12 @@
 		<h1 class="hero"></h1>
 	</div>
 </template>
-<script></script>
+<script>
+
+
+
+
+</script>
 <style lang="scss" scoped>
 @import "../assets/scss/_variables.scss";
 
@@ -22,8 +27,9 @@ div {
     justify-content: center; /* Center content vertically */
     align-items: center; /* Center content horizontally */
     flex-wrap: wrap; /* Flex-wrap to manage how items are wrapped */
-    height: auto; /* Ensure the div height fits its content */
-
+	width: 100vw;
+	height: 100vh;
+	padding: 8rem;
 
 
 	@media (max-width: 1000px) {
@@ -38,7 +44,8 @@ div {
 	font-style: normal;
 	font-weight: 100;
 	letter-spacing: -0.2rem;
-	width: 100%;
+
+
 	@media (max-width: 600px) {
 		font-size: 2.5rem;
 		line-height: 3.5rem;
