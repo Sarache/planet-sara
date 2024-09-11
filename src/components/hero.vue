@@ -27,7 +27,6 @@ div {
     justify-content: center; /* Center content vertically */
     align-items: center; /* Center content horizontally */
     flex-wrap: wrap; /* Flex-wrap to manage how items are wrapped */
-	width: 100vw;
 	height: 100vh;
 	padding: 8rem;
 

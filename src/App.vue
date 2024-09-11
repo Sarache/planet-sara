@@ -14,7 +14,7 @@ import Background from "./components/background.vue"
 	<Background> </Background>
 </template>
 
-<script>
+<!-- <script>
 export default {
 	data() {
 		return {
@@ -65,21 +65,15 @@ export default {
 		},
 	},
 }
-</script>
+</script> -->
+
 <style lang="scss" scoped>
 .pagecontainer {
-	perspective: 1000px; /* Control the depth of the 3D effect */
-	display: flex;
-	justify-content: center;
-	align-items: center;
+
 
 	.pagecontent {
-		transform-style: preserve-3d; /* Enable 3D transforms */
 		transition: transform 0.1s ease-out; /* Smooth transition */
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		overflow: hidden;
+
 	}
 }
 </style>
