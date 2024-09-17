@@ -3,10 +3,17 @@ import { ref, onMounted, onBeforeUnmount } from 'vue';
 import hero from "@/components/hero.vue";
 import featuredproject from "@/components/featuredproject.vue";
 import { useHead } from "@unhead/vue";
+import Resume from '../components/resume.vue';
 
 // SEO Setup
 useHead({
   title: "✧ 𝓟𝓵𝓪𝓷𝓮𝓽 𝓢𝓪𝓻𝓪 ✧ Welcome aboard!",
+});
+
+
+document.addEventListener('wheel', (event) => {
+   // Check if this code is triggering correctly when scrolling
+   console.log("Wheel event:", event);
 });
 
 // Refs for sections
@@ -22,6 +29,7 @@ const scrollToSection = (index) => {
     });
   }
 };
+
 
 // Handle wheel event to scroll between sections
 const handleWheel = (event) => {
@@ -140,17 +148,39 @@ export default {
       <section
         ref="sectionsRef"
         class="featuredproject"
-        style="background-color: #ffc107;"
+        style="background-color: #3a08b3; color: #f2b74a"
       >
-        <featuredproject />
+      
+
+        <featuredproject background="public/img/Axel_Stage.png">
+
+          <featuredtext color="#7d81e"></featuredtext>
+        <template v-slot:clientc>The client is a national insurance company with different products such as Bank insurance, House Insurance and a service portfolio.</template>
+        <template v-slot:challengec>We have identified that the clients of the insurance are not really aware of their contract terms and specific conditions. Moreover, in situations of distress, they get really frustrated getting in touch with a human assistant to respond quickly to their queries and giving personalized assistance.</template>
+        <template v-slot:solutionc>We have Created and designed a conversational interface with the ability to analyze insurance policies, contracts and deliver a clear and concise output to the user thanks to Generative AI. It is also capable of defining the most profitable condition when two or more contracts overlap, or even promote internal products based in the context of the conversation.</template>
+      </featuredproject>
       </section>
+
       <section
         ref="sectionsRef"
         class="featuredproject"
-        style="background-color: #3a08b3;"
+        style="background-color: #d37462; color: #8c2138;"
       >
-        <featuredproject />
+      <featuredproject background="public/img/ePOD_Desktop_v1.png">
+        <template v-slot:title>ePOD</template>
+        <template v-slot:clientc>Jean-Louis Etienne, a well-known french doctor and explorer, started a project involving a vertical boat and an expedition in the South Pole taking place in 2024. The team wanted a website that could provide open-source data that can be understood by students and non-scientists.</template>
+        <template v-slot:challengec>An interactive Digital Twin able to explain the expedition to the big audience through a 3D model and story paths and broadcast live data retrieved by the scientists in the real boat.</template>
+        <template v-slot:solutionc>The challenge was to include a sustainable solution along with a digital twin and reach the big audience, designing with strong accessibility and usability standards. As well, they wanted the desktop version first, which slowed down the mobile design phase.</template>
+      </featuredproject>
       </section>
+<section
+ref="sectionsRef"
+class="cv"
+  style="background-color: #3a08b3;"
+>
+<Resume></Resume>
+</section>
+
       <!-- Add more sections as needed -->
     </div>
     <br />
@@ -172,20 +202,17 @@ main {
 
   .scroll-container {
 
-height: auto;
    //perspective: 1000px; /* Control the depth of the 3D effect */
   transition: background-color 0.5s ease; /* Smooth transition for background color */
+  scroll-snap-align: start; /* Snap to start of the section */
+    transition: background-color 0.5s ease; /* Smooth background transition */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 
 
 }
 
-
-sectionsRef {
-  //transform-style: preserve-3d; /* Enable 3D transforms */
-    padding: 4rem;
-	header {
-		margin-bottom: 2rem;
-	}
-}
 }
 </style>

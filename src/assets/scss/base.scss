@@ -8,7 +8,6 @@
 	position: relative;
 	font-weight: normal;
 	list-style-type: none;
-	color: $off-white;
 }
 
 li {
@@ -338,7 +337,7 @@ body {
 	transition: color 0.5s, background-color 0.5s;
 	font-family: "Red Hat Mono";
 	font-weight: 300;
-	font-size: 1.5rem;
+	font-size: 1.2rem;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -426,13 +425,9 @@ h4 {
 	font-family: Victor Mono;
 	font-size: 2rem;
 	font-style: italic;
-	font-weight: 600;
+	font-weight: 400;
 	line-height: 2rem;
 	/* 114.286% */
-	letter-spacing: -0.04375rem;
-	background: $gradfull;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
 	inline-size: fit-content;
 }
 
@@ -488,7 +483,7 @@ subtitle {
 }
 
 p {
-	line-height: 2.4rem;
+	line-height: 1.5rem;
 }
 
 b {
@@ -510,7 +505,9 @@ a {
 
 
 section {
-padding: 4rem;
+	width: 100%;
+padding: 2rem;
+height: 100vh;
 	header {
 		margin-bottom: 2rem;
 	}
