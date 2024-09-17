@@ -1,60 +1,56 @@
 <script setup>
 import HeaderMenu from "@/components/HeaderMenu.vue";
 import { RouterView } from "vue-router";
-import { onMounted, onBeforeUnmount, ref } from "vue";
+import { ref, onMounted } from "vue";
 
 const pageContainer = ref(null);
-const pageContent = ref(null);
+
+const handleScroll = () => {
+  const sections = document.querySelectorAll('.scroll-section');
+
+  if (sections.length === 0) {
+    console.error('No sections found for smooth scrolling.');
+    return;
+  }
+
+  let currentSectionIndex = 0;
+
+  window.addEventListener('wheel', (event) => {
+    // Prevent default scroll behavior
+    event.preventDefault();
+
+    if (event.deltaY > 0) {
+      // Scroll down
+      currentSectionIndex = Math.min(currentSectionIndex + 1, sections.length - 1);
+    } else {
+      // Scroll up
+      currentSectionIndex = Math.max(currentSectionIndex - 1, 0);
+    }
+
+    // Scroll to the target section
+    sections[currentSectionIndex].scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+};
 
 onMounted(() => {
-  const sections = document.querySelectorAll("section");
-
-  // Create the IntersectionObserver
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          // Update the body background color based on the section
-          document.body.style.backgroundColor = getComputedStyle(entry.target).backgroundColor;
-        }
-      });
-    },
-    {
-      threshold: 0.5, // Adjust based on how much of the section needs to be visible
-    }
-  );
-
-  // Observe each section
-  sections.forEach((section) => {
-    observer.observe(section);
-  });
-
-  // Clean up when the component is unmounted
-  onBeforeUnmount(() => {
-    observer.disconnect();
-  });
+  handleScroll();
 });
 </script>
 
 <template>
   <HeaderMenu />
-  <div ref="pageContainer" class="pagecontainer" @mousemove="handleMouseMove">
-    <div ref="pageContent" class="pagecontent">
-      <RouterView />
-    </div>
+  <div ref="pageContainer" class="page-container">
+    <RouterView />
   </div>
 </template>
 
-<style lang="scss" scoped>
-.pagecontainer {
-  overflow: hidden; /* Prevent scrollbars when rotating */
-  scroll-snap-type: y mandatory; /* Enable vertical scroll-snapping */
-  height: 100vh; /* Full height for each section */
-  overflow-y: scroll; /* Enable scrolling */
-  scroll-behavior: smooth; /* Smooth scrolling behavior */
-}
-
-.pagecontent {
-  transition: transform 0.1s ease-out; /* Smooth transition */
+<style scoped>
+.page-container {
+  height: 100vh; /* Full screen height */
+  overflow: hidden; /* Disable default scrolling */
+  display: flex;
+  flex-direction: column;
 }
 </style>

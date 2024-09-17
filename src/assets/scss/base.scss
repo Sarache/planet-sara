@@ -395,6 +395,7 @@ h1 {
 	font-style: italic;
 	font-weight: 100;
 	line-height: 4rem;
+	letter-spacing: -3.5pt;
 	/* 114.286% */
 
 	@media (max-width: 600px) {
@@ -418,17 +419,16 @@ h3 {
 	font-weight: 200;
 	line-height: 3.5rem;
 	/* 116.667% */
-	letter-spacing: -0.03rem;
+	letter-spacing: -0.05rem;
 }
 
 h4 {
 	font-family: Victor Mono;
 	font-size: 2rem;
 	font-style: italic;
-	font-weight: 400;
-	line-height: 2rem;
-	/* 114.286% */
-	inline-size: fit-content;
+	font-weight: 700;
+	line-height: 2.2rem;
+	letter-spacing: -0.18rem;
 }
 
 h5 {
@@ -438,7 +438,7 @@ h5 {
 	font-weight: 900;
 	line-height: 1.5rem;
 	/* 109.091% */
-	letter-spacing: -0.1rem;
+	letter-spacing: -0.05rem;
 	color: $blue-200;
 }
 
@@ -449,8 +449,7 @@ h6 {
 	font-weight: 700;
 	line-height: 2rem;
 	/* 133.333% */
-	letter-spacing: -0.0525rem;
-	color: var(--off-white, #9fc8d9);
+	letter-spacing: -0.05rem;
 }
 
 subtitle {
@@ -506,7 +505,6 @@ a {
 
 section {
 	width: 100%;
-padding: 2rem;
 height: 100vh;
 	header {
 		margin-bottom: 2rem;

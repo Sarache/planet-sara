@@ -1,9 +1,9 @@
 <template>
 	<div class="resumeheader">
-		<hero>Resume</hero>
-		<div class="hero">Sara Jover - Interaction & Digital crafter</div>
+		<subtitle>Resume</subtitle>
+		<h1>Sara Jover - Interaction & Digital crafter</h1>
 		<div class="stripe">
-			<p>Creativity, Interaction & Sustainability   ✦   sarajotaeme@gmail.com   ✦   Madrid, Spain</p>
+			<body>Creativity, Interaction & Sustainability   ✦   sarajotaeme@gmail.com   ✦   Madrid, Spain</body>
 		</div>
 	</div>
 	<div class="resumecontent">
@@ -46,8 +46,46 @@
 	</div>
 </template>
 
-<style scoped>
-p {
-    font-size: 1.1rem;
+<style lang="scss" scoped>
+@import "../assets/scss/_variables.scss";
+
+
+.resumeheader {
+	.stripe {
+		background: $off-black;
+		position: absolute;
+		left: 0;
+		margin: 0 -4rem;
+		width: 99vw;
+		display: flex;
+		color: $yellow-200;
+		z-index: 3; 
+
+		body {
+
+width: 100%;
+text-align: center;
+
+		}
+
+
+
+	}
+		
+
+
 }
+
+.resumecontent {
+		display: flex;
+		flex-direction: row;
+		gap: 2rem;
+
+
+		.experience {
+			width:150%;
+			padding-top: 4rem;
+			background-color: $yellow-200;
+		}
+	}
 </style>

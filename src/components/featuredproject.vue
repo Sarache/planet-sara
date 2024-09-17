@@ -43,7 +43,7 @@
   @import "../assets/scss/_variables.scss";
   
   h1 {
-    padding-bottom: 3rem;
+    padding-bottom: 2rem;
     letter-spacing: -3.5pt;
   }
   
@@ -51,6 +51,7 @@
     display: flex;
     flex-direction: row;
     width: 100%; 
+    
   
     .featuredpicture {
       width: 100%;
@@ -62,7 +63,7 @@
         display: flex;
         flex-direction: column;
         gap: 2rem;
-      width: 40%;
+      width: 50%;
       padding-left: 2rem;
 justify-content: space-between;
     }
