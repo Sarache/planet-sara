@@ -107,7 +107,7 @@ onMounted(() => {
         <template v-slot:solutionc>The challenge was to include a sustainable solution along with a digital twin and reach the big audience, designing with strong accessibility and usability standards. As well, they wanted the desktop version first, which slowed down the mobile design phase.</template>
       </featuredproject>
       </section>
-      <section ref="el => sectionsRef.value[3] = el" class="scroll-section resume" style="background-color: #f2b74a;">
+      <section ref="el => sectionsRef.value[3] = el" class="scroll-section resume" style="background-color: #f6ca6f;">
         <Resume></Resume>
 </section>
 
@@ -140,8 +140,13 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 4rem;
-  transition: background-color 0.5s ease; /* Smooth transition for background color */
+  transition: background-color 1s ease; /* Smooth transition for background color */
+  padding: 4rem 0 0;
+
+  &.featuredproject {
+
+    padding: 4rem;
+  }
 }
 }
 
