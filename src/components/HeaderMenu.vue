@@ -53,9 +53,8 @@ export default {
 	transform: translateX(-50%);
 	z-index: 5;
 
-	@media (max-width: 1200px) {
-		width: 100%;
-		height: 6rem;
+	@media (max-width: 600px) {
+
 	}
 }
 
@@ -68,14 +67,6 @@ ul {
 	color: $plum-dark;
 	padding: .6rem 3rem;
 
-	@media (max-width: 1200px) {
-		flex-direction: row;
-		top: 0;
-		padding: 0;
-		margin: 2rem;
-		justify-content: space-between;
-		padding: 0;
-	}
 
 	@media (max-width: 1000px) {
 		width: 100%;
@@ -110,6 +101,10 @@ ul {
 		&:hover {
 			color: $yellow;
 		}
+
+		@media (max-width: 1000px) {
+			font-size: .8rem;
+	}
 	}
 }
 </style>

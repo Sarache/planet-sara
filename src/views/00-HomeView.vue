@@ -89,7 +89,7 @@ onMounted(() => {
       <section ref="el => sectionsRef.value[1] = el" class="scroll-section featuredproject" style="background-color: #3a08b3; color: #d37462;">
       
 
-        <featuredproject background="./img/Axel_Stage.png">
+        <featuredproject background="./img/Axel_Featured.png">
 
           <featuredtext color="#7d81e"></featuredtext>
         <template v-slot:clientc>The client is a national insurance company with different products such as Bank insurance, House Insurance and a service portfolio.</template>
@@ -100,7 +100,7 @@ onMounted(() => {
 
       <section ref="el => sectionsRef.value[2] = el" class="scroll-section featuredproject" style="background-color: #c15544; color: #54222b;">
 
-      <featuredproject background="./img/ePOD_Desktop_v1.png">
+      <featuredproject background="./img/ePOD_Featured.png">
         <template v-slot:title>ePOD</template>
         <template v-slot:clientc>Jean-Louis Etienne, a well-known french doctor and explorer, started a project involving a vertical boat and an expedition in the South Pole taking place in 2024. The team wanted a website that could provide open-source data that can be understood by students and non-scientists.</template>
         <template v-slot:challengec>An interactive Digital Twin able to explain the expedition to the big audience through a 3D model and story paths and broadcast live data retrieved by the scientists in the real boat.</template>

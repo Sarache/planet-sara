@@ -55,7 +55,7 @@
   
     .featuredpicture {
       width: 100%;
-      background-size: cover;
+      background-size:contain;
       background-position: center;
       background-repeat: no-repeat;    }
   

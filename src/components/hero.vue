@@ -27,12 +27,12 @@ div {
     justify-content: center; /* Center content vertically */
     align-items: center; /* Center content horizontally */
     flex-wrap: wrap; /* Flex-wrap to manage how items are wrapped */
-	height: 100vh;
+	height: 90vh;
 	padding: 8rem;
 
 
 	@media (max-width: 1000px) {
-		font-size: 2rem;
+		padding: 2rem;
 	}
 }
 
@@ -46,8 +46,7 @@ div {
 
 
 	@media (max-width: 600px) {
-		font-size: 2.5rem;
-		line-height: 3.5rem;
+
 	}
 }
 </style>
