@@ -54,7 +54,6 @@
 						and art direction of their products.
 					</p>
 				</div>
-
 			</div>
 			<div class="separator"></div>
 			<div class="experienceitem">
@@ -102,7 +101,7 @@
 				<div class="experienceitem">
 					<div class="content">
 						<h6>Languages</h6>
-						<p>Spanish ✳︎✳︎✳︎✳︎    French ✳︎✳︎✳︎✳︎    English ✳︎✳︎✳✳︎    Italian ✳︎✳︎</p>
+						<p>Spanish ✳︎✳︎✳︎✳︎ French ✳︎✳︎✳︎✳︎ English ✳︎✳︎✳✳︎ Italian ✳︎✳︎</p>
 					</div>
 				</div>
 				<div class="separator"></div>
@@ -116,7 +115,7 @@
 				<div class="experienceitem">
 					<div class="content">
 						<h6>Soft skills</h6>
-						<p> Fast delivery ✳︎ Pixel-perfectionist ✳︎ Good feedback receiver ✳︎ Process and optimization oriented ✳︎ Overly creative</p>
+						<p>Fast delivery ✳︎ Pixel-perfectionist ✳︎ Good feedback receiver ✳︎ Process and optimization oriented ✳︎ Overly creative</p>
 					</div>
 				</div>
 			</div>
@@ -127,19 +126,30 @@
 <style lang="scss" scoped>
 @import "../assets/scss/_variables.scss";
 
+template {
+	padding: 0;
+}
+
 .resumeheader {
 	display: flex;
 	flex-direction: column;
 	gap: 0rem;
 	padding: 0 4rem;
 
+	@media (max-width: 1000px) {
+		padding: 0 2rem;
+	}
+
 	.stripe {
 		background: $off-black;
-		width: 99vw;
+		width: 100vw;
 		margin: 1rem -4rem 0;
 		display: flex;
 		color: $yellow-200;
 		z-index: 3;
+
+		@media (max-width: 1000px) {
+			margin: 1rem -2rem 0;	}
 
 		body {
 			width: 100%;
@@ -152,6 +162,10 @@
 	display: flex;
 	flex-direction: row;
 
+	@media (max-width: 1000px) {
+		flex-direction: column;
+	}
+
 	bodysmall {
 		color: $plum;
 	}
@@ -161,12 +175,17 @@
 		display: flex;
 		flex-direction: column;
 		gap: 1rem;
+
+
+		@media (max-width: 1000px) {
+			width: 100%;
+			}
 	}
-.experienceitem {
-	display: flex;
-	flex-direction: column;
-	gap: 0rem;
-}
+	.experienceitem {
+		display: flex;
+		flex-direction: column;
+		gap: 0rem;
+	}
 	.separator {
 		height: 1px;
 		width: 100%;

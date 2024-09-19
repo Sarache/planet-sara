@@ -42,6 +42,24 @@
   <style lang="scss" scoped>
   @import "../assets/scss/_variables.scss";
   
+
+  @media (max-width: 768px) {
+  .featuredcontent {
+
+    flex-direction: column; // Stack on smaller screens
+
+    .featuredpicture {
+      height: 50vh;
+    }
+
+    .featuredtext {
+      width: 100%; // Full width on smaller screens
+      padding-left: 0; // Remove padding for mobile
+    }
+  }
+}
+
+
   h1 {
     padding-bottom: 2rem;
     letter-spacing: -3.5pt;
@@ -51,21 +69,30 @@
     display: flex;
     flex-direction: row;
     width: 100%; 
+   
+    @media (max-width: 1000px) {
+      flex-direction: column;
+			}
     
   
     .featuredpicture {
       width: 100%;
       background-size:contain;
-      background-position: center;
+      background-position: cover;
       background-repeat: no-repeat;    }
+
   
     .featuredtext {
         display: flex;
         flex-direction: column;
         gap: 2rem;
-      width: 50%;
-      padding-left: 2rem;
+      width: 40%;
 justify-content: space-between;
+
+@media (max-width: 1000px) {
+        width: 100%;
+			}
+
     }
   }
   </style>
