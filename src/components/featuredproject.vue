@@ -43,7 +43,7 @@
   @import "../assets/scss/_variables.scss";
   
 
-  @media (max-width: 768px) {
+  @media (max-width: 1000px) {
   .featuredcontent {
     
     flex-direction: column; // Stack on smaller screens
