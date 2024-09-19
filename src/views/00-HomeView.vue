@@ -77,6 +77,7 @@ onBeforeUnmount(() => {
 			<section class="scroll-section featuredproject" style="color: #d37462">
 				<featuredproject background="./img/Axel_Featured.png">
 					<featuredtext color="#7d81e"></featuredtext>
+          <template v-slot:title>Axel, the Gen AI Insurance asisstant</template>
 					<template v-slot:clientc
 						>The client is a national insurance company with different products such as Bank insurance, House Insurance and a service
 						portfolio.</template
@@ -152,12 +153,12 @@ main {
 
       
       @media (max-width: 1000px) {
-				padding: 2rem;
+
 				height: fit-content;
 			}
 		}
 		.resume {
-			padding: 0;
+			padding: 6rem 0;
 		}
 	}
 }

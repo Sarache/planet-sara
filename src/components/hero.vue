@@ -32,7 +32,7 @@ div {
 
 
 	@media (max-width: 1000px) {
-		padding: 2rem;
+		padding: 0;
 	}
 }
 

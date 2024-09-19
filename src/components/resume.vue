@@ -126,9 +126,6 @@
 <style lang="scss" scoped>
 @import "../assets/scss/_variables.scss";
 
-template {
-	padding: 0;
-}
 
 .resumeheader {
 	display: flex;
@@ -137,7 +134,7 @@ template {
 	padding: 0 4rem;
 
 	@media (max-width: 1000px) {
-		padding: 0 2rem;
+		padding: 0 1rem;
 	}
 
 	.stripe {
@@ -149,7 +146,7 @@ template {
 		z-index: 3;
 
 		@media (max-width: 1000px) {
-			margin: 1rem -2rem 0;	}
+			margin: 1rem -1rem 0;	}
 
 		body {
 			width: 100%;

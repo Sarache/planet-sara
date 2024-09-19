@@ -70,6 +70,7 @@ ul {
 
 	@media (max-width: 1000px) {
 		width: 100%;
+		padding: .6rem 1rem;
 	}
 
 	li {

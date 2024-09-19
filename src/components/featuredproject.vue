@@ -45,11 +45,11 @@
 
   @media (max-width: 768px) {
   .featuredcontent {
-
+    
     flex-direction: column; // Stack on smaller screens
 
     .featuredpicture {
-      height: 50vh;
+      padding-top: 75%;
     }
 
     .featuredtext {
