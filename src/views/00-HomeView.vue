@@ -153,7 +153,7 @@ main {
 
       
       @media (max-width: 1000px) {
-
+        padding: 1rem;
 				height: fit-content;
 			}
 		}
