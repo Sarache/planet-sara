@@ -149,6 +149,9 @@ main {
 			flex-direction: column;
 			justify-content: center;
 			padding: 4rem;
+      @media (max-width: 1000px) {
+padding-top:5arem;
+    }
 			// Avoid background-color in sections themselves so that body color takes over
 
       

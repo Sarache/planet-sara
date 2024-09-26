@@ -9,13 +9,17 @@
 		<h1 class="hero">Digital Services & Media Production</h1>
 		<h1 class="hero"></h1>
 	</div>
+	<fallingbg></fallingbg>
 </template>
-<script>
 
+<script setup>
+import fallingbg from "@/components/fallingbg.vue"
 
 
 
 </script>
+
+
 <style lang="scss" scoped>
 @import "../assets/scss/_variables.scss";
 
