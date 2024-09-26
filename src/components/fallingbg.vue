@@ -30,6 +30,7 @@
     methods: {
       // Generates random falling objects with random properties (left position, delay, size)
       generateFallingObjects() {
+  // Define 13 image sources
   const elementSources = [
     './img/doodles/Artboard1.png',
     './img/doodles/Artboard2.png',
@@ -46,24 +47,49 @@
     './img/doodles/Artboard13.png',
   ];
 
-  const numObjects = 1; // Total number of objects to fall
+  const totalObjects = 13; // We want exactly 13 objects to fall
 
+  // Specify exact horizontal and vertical start positions (left: %, top: px)
+  const birthRatePositions = [
+    { left: 5, top: -50 },   // 5% from the left
+    { left: 15, top: -80 },  // 15% from the left
+    { left: 25, top: -60 },  // 25% from the left
+    { left: 35, top: -100 }, // 35% from the left
+    { left: 45, top: -50 },  // 45% from the left
+    { left: 55, top: -90 },  // 55% from the left
+    { left: 65, top: -70 },  // 65% from the left
+    { left: 75, top: -120 }, // 75% from the left
+    { left: 85, top: -60 },  // 85% from the left
+    { left: 10, top: -50 },  // 95% from the left
+    { left: 40, top: -110 }, // Custom position for variation
+    { left: 60, top: -130 }, // Custom position for variation
+    { left: 80, top: -100 }, // Custom position for variation
+  ];
 
- for (let i = 0; i < numObjects; i++) {
-    elementSources.forEach((src) => {
-      const left = Math.random() * 100; // Random horizontal position (0-100%)
-      const delay = Math.random() * 7; // Random delay (0-5s) to start falling
-      const duration = 5 + Math.random() * 30; // Random duration (5-10s) for the fall
-      const size = 150 + Math.random() * 200; // Random size (50px to 100px)
+  // Loop to generate 13 falling objects
+  for (let i = 0; i < totalObjects; i++) {
+    const src = elementSources[i]; // Use each image source once
 
-      // Push each generated object with random properties into the fallingElements array
-      this.fallingElements.push({ src, left, delay, duration, size });
+    const position = birthRatePositions[i]; // Use each specified start position
+
+    const delay = Math.random() * 2; // Random delay (0-5s)
+    const duration = 9 + Math.random() * 35; // Random duration (5-10s)
+    const size = 120 + Math.random() * 200; // Random size (50-100px)
+
+    // Push the object data to the array
+    this.fallingElements.push({
+      src,
+      left: position.left,  // Set predefined horizontal position
+      top: position.top,    // Set predefined vertical position
+      delay,
+      duration,
+      size,
     });
   }
 }
-,
-    },
-  };
+
+}
+    };
   </script>
   
   <style scoped lang="scss">
