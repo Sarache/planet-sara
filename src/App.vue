@@ -12,7 +12,7 @@ import Fallingbg from "@/components/fallingbg.vue"
 	</div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .page-container {
 	height: 100vh; /* Full screen height */
 	overflow: hidden; /* Disable default scrolling */

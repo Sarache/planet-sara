@@ -79,12 +79,12 @@ export default {
 	display: flex;
 	flex-direction: column;
 	border-radius: 1.5rem;
-	border: 1px solid $blue-sky;
+	border: 1px solid $off-black;
 	overflow: hidden;
 	position: relative; /* Needed for the absolute positioning of project-bg */
 	transition: 1s;
 	z-index: 4;
-	height: 300px; /* Set a fixed height for the card */
+	height: 20rem; /* Set a fixed height for the card */
 	max-width: 100%; /* Ensure the card doesn't expand beyond its parent */
 
 	&:hover .project-bg {
@@ -96,7 +96,7 @@ export default {
 	}
 
 	h6 {
-		color: $blue-200;
+		color: $off-black;
 		transition: font-size 0.5s;
 		position: absolute;
 		top: 2rem;
@@ -107,7 +107,6 @@ export default {
 	&:hover .project-overlay h6 {
 		font-size: 2rem; // Change to desired font size
 		transition: font-size 1s;
-		-webkit-text-fill-color: $off-white;
 		height: 100%;
 	}
 
@@ -116,6 +115,7 @@ export default {
 	}
 
 	.description {
+		color: $off-black;
 		position: absolute;
 		top: 6rem;
 		left: 2rem;
@@ -179,7 +179,7 @@ export default {
 				align-items: center;
 
 				background: $off-black;
-				color: $blue-200;
+				color: $off-white;
 				font-family: Red Hat Mono;
 				text-transform: uppercase;
 				font-size: 1rem;

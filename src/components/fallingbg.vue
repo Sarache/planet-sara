@@ -25,19 +25,19 @@ const fallingElements = ref<Array<{ src: string; left: number; rotation: number;
 
 const generateFallingObjects = () => {
 	const elements = [
-		{ src: "./img/doodles/Artboard1.png", sizeMultiplier: 1 },
-		{ src: "./img/doodles/Artboard2.png", sizeMultiplier: 1 },
-		{ src: "./img/doodles/Artboard3.png", sizeMultiplier: 1 },
-		{ src: "./img/doodles/Artboard4.png", sizeMultiplier: 1 },
-		{ src: "./img/doodles/Artboard5.png", sizeMultiplier: 1 },
-		{ src: "./img/doodles/Artboard6.png", sizeMultiplier: 1 },
-		{ src: "./img/doodles/Artboard7.png", sizeMultiplier: 1 },
-		{ src: "./img/doodles/Artboard8.png", sizeMultiplier: 1 },
-		{ src: "./img/doodles/Artboard9.png", sizeMultiplier: 1 },
-		{ src: "./img/doodles/Artboard10.png", sizeMultiplier: 1 },
-		{ src: "./img/doodles/Artboard11.png", sizeMultiplier: 1 },
-		{ src: "./img/doodles/Artboard12.png", sizeMultiplier: 1 },
-		{ src: "./img/doodles/Artboard13.png", sizeMultiplier: 1 },
+		{ src: "./img/doodles/Artboard1.png", sizeMultiplier: 1.2 },
+		{ src: "./img/doodles/Artboard2.png", sizeMultiplier: .7 },
+		{ src: "./img/doodles/Artboard3.png", sizeMultiplier: 1.6 },
+		{ src: "./img/doodles/Artboard4.png", sizeMultiplier: 1.6 },
+		{ src: "./img/doodles/Artboard5.png", sizeMultiplier: 1.2 },
+		{ src: "./img/doodles/Artboard6.png", sizeMultiplier: .5 },
+		{ src: "./img/doodles/Artboard7.png", sizeMultiplier: 1.2 },
+		{ src: "./img/doodles/Artboard8.png", sizeMultiplier: 1.2 },
+		{ src: "./img/doodles/Artboard9.png", sizeMultiplier: 1.2 },
+		{ src: "./img/doodles/Artboard10.png", sizeMultiplier: 1.2 },
+		{ src: "./img/doodles/Artboard11.png", sizeMultiplier: 0.6 },
+		{ src: "./img/doodles/Artboard12.png", sizeMultiplier: 0.8 },
+		{ src: "./img/doodles/Artboard13.png", sizeMultiplier: 1.2 },
 	]
 
 	const totalObjects = 25
@@ -45,10 +45,10 @@ const generateFallingObjects = () => {
 	const maxDelay = 5
 
 	const maxDuration = 30
-	const minDuration = 8
+	const minDuration = 15
 
 	const maxSize = 300
-	const minSize = 120
+	const minSize = 180
 
 	const maxRotation = 15
 
@@ -93,7 +93,7 @@ onMounted(() => {
 	height: 100vh;
 	pointer-events: none; /* Prevents interference with user interactions */
 	overflow: hidden; /* Ensures objects are hidden when they exit the screen */
-	z-index: -1; /* Places it behind other content */
+	z-index: -20; /* Places it behind other content */
 }
 
 /* Styles for each falling object */

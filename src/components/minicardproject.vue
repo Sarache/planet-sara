@@ -29,7 +29,6 @@ a {
 }
 
 .project {
-	height: 4rem;
 	justify-content: space-between;
 	align-items: flex-start;
 	align-self: stretch;
@@ -37,7 +36,7 @@ a {
 	display: flex;
 	flex-direction: column;
 	border-radius: 1.5rem;
-	border: 1px solid #22303f;
+	border: 1px solid $off-black;
 	overflow: hidden;
 	position: relative; /* Needed for the absolute positioning of project-bg */
 	z-index: 4;
