@@ -24,20 +24,20 @@ import { ref } from "vue"
 const fallingElements = ref<Array<{ src: string; left: number; rotation: number; delay: number; duration: number; size: number }>>([])
 
 const generateFallingObjects = () => {
-	const elementSources = [
-		"./img/doodles/Artboard1.png",
-		"./img/doodles/Artboard2.png",
-		"./img/doodles/Artboard3.png",
-		"./img/doodles/Artboard4.png",
-		"./img/doodles/Artboard5.png",
-		"./img/doodles/Artboard6.png",
-		"./img/doodles/Artboard7.png",
-		"./img/doodles/Artboard8.png",
-		"./img/doodles/Artboard9.png",
-		"./img/doodles/Artboard10.png",
-		"./img/doodles/Artboard11.png",
-		"./img/doodles/Artboard12.png",
-		"./img/doodles/Artboard13.png",
+	const elements = [
+		{ src: "./img/doodles/Artboard1.png", sizeMultiplier: 1 },
+		{ src: "./img/doodles/Artboard2.png", sizeMultiplier: 1 },
+		{ src: "./img/doodles/Artboard3.png", sizeMultiplier: 1 },
+		{ src: "./img/doodles/Artboard4.png", sizeMultiplier: 1 },
+		{ src: "./img/doodles/Artboard5.png", sizeMultiplier: 1 },
+		{ src: "./img/doodles/Artboard6.png", sizeMultiplier: 1 },
+		{ src: "./img/doodles/Artboard7.png", sizeMultiplier: 1 },
+		{ src: "./img/doodles/Artboard8.png", sizeMultiplier: 1 },
+		{ src: "./img/doodles/Artboard9.png", sizeMultiplier: 1 },
+		{ src: "./img/doodles/Artboard10.png", sizeMultiplier: 1 },
+		{ src: "./img/doodles/Artboard11.png", sizeMultiplier: 1 },
+		{ src: "./img/doodles/Artboard12.png", sizeMultiplier: 1 },
+		{ src: "./img/doodles/Artboard13.png", sizeMultiplier: 1 },
 	]
 
 	const totalObjects = 25
@@ -53,13 +53,13 @@ const generateFallingObjects = () => {
 	const maxRotation = 15
 
 	for (let i = 0; i < totalObjects; i++) {
-		const src = elementSources[Math.floor(Math.random() * elementSources.length)]
+		const { src, sizeMultiplier } = elements[Math.floor(Math.random() * elements.length)]
 
 		const horizontalPosition = Math.floor(Math.random() * 100) // Use each specified start position
 
 		const delay = Math.floor(Math.random() * maxDelay)
 		const duration = Math.floor(Math.random() * (maxDuration - minDuration + 1) + minDuration)
-		const size = Math.floor(Math.random() * (maxSize - minSize + 1) + minSize)
+		const size = Math.floor(Math.random() * (maxSize - minSize + 1) + minSize) * sizeMultiplier
 		const rotation = Math.random() < 0.5 ? Math.floor(Math.random() * maxRotation) : -Math.abs(Math.floor(Math.random() * maxRotation))
 
 		fallingElements.value = [
