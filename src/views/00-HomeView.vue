@@ -144,7 +144,6 @@ main {
 
 		.scroll-section {
 			scroll-snap-align: start; /* Snap each section to the top */
-			height: 100vh;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
@@ -162,6 +161,7 @@ padding-top:5arem;
 		}
 		.resume {
 			padding: 6rem 0;
+			height: 90vh;
 		}
 	}
 }

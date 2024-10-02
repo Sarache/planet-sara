@@ -88,7 +88,7 @@ export default {
 	max-width: 100%; /* Ensure the card doesn't expand beyond its parent */
 
 	&:hover .project-bg {
-		opacity: 0.6;
+		opacity: 1;
 		filter: blur(0px);
 		background: center center/cover no-repeat;
 		background-size: 110%;
@@ -108,10 +108,12 @@ export default {
 		font-size: 2rem; // Change to desired font size
 		transition: font-size 1s;
 		height: 100%;
+		color: $off-white;
+		mix-blend-mode: exclusion;
 	}
 
 	&:hover .project-overlay .tag-container {
-		-webkit-text-fill-color: $off-white;
+		-webkit-text-fill-color: $yellow-400;
 	}
 
 	.description {
@@ -179,7 +181,7 @@ export default {
 				align-items: center;
 
 				background: $off-black;
-				color: $off-white;
+				color: $coral;
 				font-family: Red Hat Mono;
 				text-transform: uppercase;
 				font-size: 1rem;

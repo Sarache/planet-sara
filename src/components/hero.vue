@@ -39,4 +39,9 @@ div {
 	@media (max-width: 600px) {
 	}
 }
+
+.hero {
+	color: $yellow-400;
+}
+
 </style>

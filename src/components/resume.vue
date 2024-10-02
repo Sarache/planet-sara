@@ -140,7 +140,7 @@
 	.stripe {
 		background: $off-black;
 		width: 100vw;
-		margin: 1rem -5rem 0;
+		margin: 1rem -3.5rem 0;
 		display: flex;
 		color: $yellow-200;
 		z-index: 3;

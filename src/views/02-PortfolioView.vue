@@ -26,11 +26,16 @@ main {
 	width: 100%;
 	height: 100%;
 	gap: 2rem;
+	padding: 4rem;
+
+
+
 	.portfolio-content {
 		display: flex;
 		flex-wrap: wrap;
 		gap: 4rem;
 		margin-top: 4rem;
+
 	}
 }
 </style>
