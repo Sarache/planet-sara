@@ -17,7 +17,7 @@
 				<p><slot name="solutionc"></slot></p>
 			</div>
 
-			<div class="button"><img class="icon" src="" /><slot name="button"></slot></div>
+			<div class="button"><slot name="button">See study case</slot><img class="iconarrow" src="/public/arrow-bold.svg" /></div>
 		</div>
 	</div>
 </template>
@@ -99,6 +99,27 @@ h1 {
 		@media (max-width: 1300px) {
 			width: 100%;
       height: 100%;
+		}
+
+		.button {
+			background-color: $off-black;
+			mix-blend-mode: overlay;
+			padding: .5rem 2rem .5rem 2.5rem;
+			border-radius: 0 0 4rem 4rem ;
+			display: flex;
+			gap: 1rem;
+			font-family: Victor Mono;
+			font-style: italic;
+			font-weight: 700;
+			width: fit-content;
+			color: $off-white;
+
+			img {
+				width: 1.5rem;
+				rotate: 45deg;
+
+			}
+
 		}
 	}
 }

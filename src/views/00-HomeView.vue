@@ -161,7 +161,6 @@ padding-top:5arem;
 		}
 		.resume {
 			padding: 6rem 0;
-			height: 90vh;
 		}
 	}
 }

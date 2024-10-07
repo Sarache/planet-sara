@@ -628,6 +628,21 @@ footer {
 	}
 }
 
+.iconarrow {
+	animation: rotateAnimation2 3s linear infinite;
+}
+
+@keyframes rotateAnimation2 {
+	from {
+		transform: rotateX(45deg);
+	}
+
+	to {
+		transform: rotateX(225deg);
+	}
+}
+
+
 :root {
 	--circle-size: 80%;
 	--blending: screen;
