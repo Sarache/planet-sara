@@ -17,13 +17,13 @@
 				<p><slot name="solutionc"></slot></p>
 			</div>
 
-			<div class="button"><slot name="button">See study case</slot><img class="iconarrow" src="/public/arrow-bold.svg" /></div>
+			<div class="button"><slot name="button">See case study</slot><img class="iconarrow" src="/public/arrow-bold.svg" /></div>
 		</div>
 	</div>
 </template>
 
 <script>
-import carouselhome from "/src/components/carouselhome.vue"
+import carouselhome from "/src/components/carouselhome.vue";
 
 export default {
 	components: {
@@ -35,8 +35,15 @@ export default {
 			default: "/public/img/Axel_3D.png", // Default background
 		},
 	},
-}
+	computed: {
+		isVideo() {
+			// Check if the background prop is a video file based on its extension
+			return this.background.endsWith(".mp4");
+		},
+	},
+};
 </script>
+
 
 <style lang="scss" scoped>
 @import "../assets/scss/_variables.scss";
@@ -45,6 +52,23 @@ export default {
 	.featuredcontent {
 		flex-direction: column; // Stack on smaller screens
 
+
+		/* Style for video */
+	video {
+		width: 100%;
+		height: auto;
+		border-radius: 0.5rem;
+	}
+
+	/* Style for image */
+	div {
+		width: 100%;
+		height: 100%;
+		background-size: cover;
+		background-position: center;
+		border-radius: 0.5rem;
+	}
+	
 		.featuredpicture {
 			padding-top: 75%;
 		}
@@ -76,6 +100,7 @@ h1 {
 	display: flex;
 	flex-direction: row;
 	width: 100%;
+	height: 80vh;
 
 	@media (max-width: 1300px) {
 		flex-direction: column;
@@ -92,9 +117,7 @@ h1 {
 		display: flex;
 		flex-direction: column;
 		gap: 2rem;
-		width: 40%;
-		justify-content: space-between;
-		height: 80vh;
+		width: 30%;
 
 		@media (max-width: 1300px) {
 			width: 100%;

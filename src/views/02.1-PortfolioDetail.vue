@@ -21,16 +21,19 @@ useHead({
 
 <style lang="scss" scoped>
 main {
+	padding: 4rem;
 	.portfolioitem-content {
 		display: flex;
 		flex-wrap: wrap;
 		gap: 2rem;
 		width: 100%;
 
+
 		.portfolioitem-section {
 			display: flex;
 			gap: 4rem;
 			width: 100%;
+			padding: 4rem;
 			.portfoliosection-content {
 			}
 		}

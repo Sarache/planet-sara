@@ -86,6 +86,7 @@ export default {
 	z-index: 4;
 	height: 20rem; /* Set a fixed height for the card */
 	max-width: 100%; /* Ensure the card doesn't expand beyond its parent */
+	mix-blend-mode: luminosity;
 
 	&:hover .project-bg {
 		opacity: 1;
@@ -157,6 +158,7 @@ export default {
 		top: 0;
 		opacity: 0.1;
 		background: center center/cover no-repeat;
+		background-blend-mode: luminosity;
 		background-size: 120%;
 		filter: blur(16px);
 		z-index: -1; // Places background behind content

@@ -2,12 +2,14 @@
 	<div class="resumeheader">
 		<subtitle>Resume</subtitle>
 		<h1>Sara Jover - Interaction & Digital crafter</h1>
-		<div class="stripe">
+
+	</div>
+
+	<div class="stripe">
 			<body>
 				Creativity, Interaction & Sustainability   ✦   sarajotaeme@gmail.com   ✦   Madrid, Spain
 			</body>
 		</div>
-	</div>
 	<div class="resumecontent">
 		<div class="experience">
 			<h4 class="explabel">Relevant experience</h4>
@@ -137,10 +139,14 @@
 		padding: 0 1rem;
 	}
 
-	.stripe {
+
+}
+
+
+.stripe {
 		background: $off-black;
-		width: 100vw;
-		margin: 1rem -3.5rem 0;
+		width: 100%;
+		margin: 2rem 0 0 0;
 		display: flex;
 		color: $yellow-200;
 		z-index: 3;
@@ -153,7 +159,6 @@
 			text-align: center;
 		}
 	}
-}
 
 .resumecontent {
 	display: flex;

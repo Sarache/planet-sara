@@ -75,42 +75,33 @@ onBeforeUnmount(() => {
 				<hero />
 			</section>
 			<section class="scroll-section featuredproject" style="color: #d37462">
-				<featuredproject background="./img/Axel_Featured.png">
-					<featuredtext color="#7d81e"></featuredtext>
-          <template v-slot:title>Axel, the Gen AI Insurance asisstant</template>
-					<template v-slot:clientc
-						>The client is a national insurance company with different products such as Bank insurance, House Insurance and a service
-						portfolio.</template
-					>
-					<template v-slot:challengec
-						>We have identified that the clients of the insurance are not really aware of their contract terms and specific conditions.
-						Moreover, in situations of distress, they get really frustrated getting in touch with a human assistant to respond quickly to
-						their queries and giving personalized assistance.</template
-					>
-					<template v-slot:solutionc
-						>We have Created and designed a conversational interface with the ability to analyze insurance policies, contracts and deliver a
-						clear and concise output to the user thanks to Generative AI. It is also capable of defining the most profitable condition when
-						two or more contracts overlap, or even promote internal products based in the context of the conversation.</template
-					>
-				</featuredproject>
+				<featuredproject background="./vid/Teaser_v2_EN.mp4">
+	<featuredtext color="#7d81e"></featuredtext>
+	<template v-slot:title>Axel, the Gen AI Insurance assistant</template>
+	<template v-slot:clientc>
+		A national insurance company offering a range of products, including bank and home insurance, as well as a diverse service portfolio.
+	</template>
+	<template v-slot:challengec>
+		Clients often lack awareness of their contract terms and conditions. During stressful situations, frustration grows due to difficulty in quickly accessing personalized support from human assistants.
+	</template>
+	<template v-slot:solutionc>
+		We designed a conversational interface powered by Generative AI to analyze insurance policies and contracts, delivering clear, concise information to users. It identifies the most advantageous conditions when contracts overlap and can even promote relevant internal products based on conversation context.
+	</template>
+</featuredproject>
+
 			</section>
 
 			<section class="scroll-section featuredproject" style="color: #54222b">
 				<featuredproject background="./img/ePOD_Featured.png">
 					<template v-slot:title>ePOD</template>
 					<template v-slot:clientc
-						>Jean-Louis Etienne, a well-known french doctor and explorer, started a project involving a vertical boat and an expedition in
-						the South Pole taking place in 2024. The team wanted a website that could provide open-source data that can be understood by
-						students and non-scientists.</template
+						>Jean-Louis Étienne, a renowned French doctor and explorer, launched a project featuring a vertical boat and a 2024 South Pole expedition. The team aimed to create a website offering open-source data accessible to students and non-scientists.</template
 					>
 					<template v-slot:challengec
-						>An interactive Digital Twin able to explain the expedition to the big audience through a 3D model and story paths and broadcast
-						live data retrieved by the scientists in the real boat.</template
+						>To develop an interactive Digital Twin that explains the expedition to a broad audience through a 3D model, story paths, and live data streamed directly from the boat.</template
 					>
 					<template v-slot:solutionc
-						>The challenge was to include a sustainable solution along with a digital twin and reach the big audience, designing with strong
-						accessibility and usability standards. As well, they wanted the desktop version first, which slowed down the mobile design
-						phase.</template
+						>We delivered a sustainable solution with a Digital Twin designed to meet accessibility and usability standards, ensuring it resonated with a wide audience. Prioritizing a desktop-first approach added complexity but ensured a strong foundation for subsequent mobile designs.</template
 					>
 				</featuredproject>
 			</section>
