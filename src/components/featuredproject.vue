@@ -1,32 +1,30 @@
 <template>
-   <subtitle>Featured case studies</subtitle>
-   <h1><slot name="title">Project title example</slot></h1>
-   <div class="featuredcontent">
-      <div v-if="isVideo" class="featuredpicture">
-         <video autoplay muted loop :src="background" class="featuredvideo"></video>
-      </div>
-      <div v-else class="featuredpicture" :style="{ backgroundImage: `url(${background})` }"></div>
-      <div class="featuredtext" :style="{ color: `${color}` }">
-         <div class="featsection">
-            <h4>The client</h4>
-            <p><slot name="clientc">example</slot></p>
-         </div>
-         <div class="featsection">
-            <h4>The challenge</h4>
-            <p><slot name="challengec"></slot></p>
-         </div>
-         <div class="featsection">
-            <h4>The solution</h4>
-            <p><slot name="solutionc"></slot></p>
-         </div>
-         <div class="button"><slot name="button">See case study</slot><img class="iconarrow" src="/public/arrow-bold.svg" /></div>
-      </div>
-   </div>
+	<subtitle>Featured case studies</subtitle>
+	<h1><slot name="title">Project title example</slot></h1>
+	<div class="featuredcontent">
+		<div v-if="isVideo" class="featuredpicture">
+			<video autoplay muted loop :src="background" class="featuredvideo"></video>
+		</div>
+		<div v-else class="featuredpicture" :style="{ backgroundImage: `url(${background})` }"></div>
+		<div class="featuredtext" :style="{ color: `${color}` }">
+			<div class="featsection">
+				<h4>The client</h4>
+				<p><slot name="clientc">example</slot></p>
+			</div>
+			<div class="featsection">
+				<h4>The challenge</h4>
+				<p><slot name="challengec"></slot></p>
+			</div>
+			<div class="featsection">
+				<h4>The solution</h4>
+				<p><slot name="solutionc"></slot></p>
+			</div>
+			<div class="button"><slot name="button">See case study</slot><img class="iconarrow" src="/public/arrow-bold.svg" /></div>
+		</div>
+	</div>
 </template>
 
-
 <script>
-
 export default {
 	props: {
 		background: {
@@ -37,12 +35,11 @@ export default {
 	computed: {
 		isVideo() {
 			// Check if the background prop is a video file based on its extension
-			return this.background.endsWith(".mp4");
+			return this.background.endsWith(".mp4")
 		},
 	},
-};
+}
 </script>
-
 
 <style lang="scss" scoped>
 @import "../assets/scss/_variables.scss";
@@ -51,25 +48,26 @@ export default {
 	.featuredcontent {
 		flex-direction: column; // Stack on smaller screens
 
-
-
 		/* Style for video */
 
-
-	/* Style for image */
-	div {
-		width: 100%;
-		background-size: cover;
-		background-position: center;
-		border-radius: 0.5rem;
-	}
+		/* Style for image */
+		div {
+			width: 100%;
+			background-size: cover;
+			background-position: center;
+			border-radius: 0.5rem;
+		}
 
 		.featuredpicture {
 			padding-top: 75%;
 			border-radius: 0.5rem;
-			overflow: hidden; 
-		}
+			overflow: hidden;
 
+			.featuredvideo {
+				width: 100%;
+				border-radius: 1rem;
+			}
+		}
 
 		.featuredtext {
 			width: 100%; // Full width on smaller screens
@@ -78,20 +76,15 @@ export default {
 	}
 }
 
-
 subtitle {
-
-  @media (max-width: 1300px) {
-padding-top: 4rem;
+	@media (max-width: 1300px) {
+		padding-top: 4rem;
 	}
 }
 
 h1 {
 	padding-bottom: 2rem;
 	letter-spacing: -3.5pt;
-
-
-
 }
 
 .featuredcontent {
@@ -112,7 +105,7 @@ h1 {
 		background-position: cover;
 		background-repeat: no-repeat;
 		border-radius: 0.5rem;
-		overflow: hidden; 
+		overflow: hidden;
 	}
 
 	.featuredtext {
@@ -123,14 +116,14 @@ h1 {
 
 		@media (max-width: 1300px) {
 			width: 100%;
-      height: 100%;
+			height: 100%;
 		}
 
 		.button {
 			background-color: $off-black;
 			mix-blend-mode: overlay;
-			padding: .5rem 2rem .5rem 2.5rem;
-			border-radius: 0 0 4rem 4rem ;
+			padding: 0.5rem 2rem 0.5rem 2.5rem;
+			border-radius: 0 0 4rem 4rem;
 			display: flex;
 			gap: 1rem;
 			font-family: Victor Mono;
@@ -142,9 +135,7 @@ h1 {
 			img {
 				width: 1.5rem;
 				rotate: 45deg;
-
 			}
-
 		}
 	}
 }

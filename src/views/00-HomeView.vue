@@ -76,32 +76,39 @@ onBeforeUnmount(() => {
 			</section>
 			<section class="scroll-section featuredproject" style="color: #d37462">
 				<featuredproject background="./vid/Teaser_v2_EN.mp4">
-	<featuredtext color="#7d81e"></featuredtext>
-	<template v-slot:title>Axel, the Gen AI Insurance assistant</template>
-	<template v-slot:clientc>
-		A national insurance company offering a range of products, including bank and home insurance, as well as a diverse service portfolio.
-	</template>
-	<template v-slot:challengec>
-		Clients often lack awareness of their contract terms and conditions. During stressful situations, frustration grows due to difficulty in quickly accessing personalized support from human assistants.
-	</template>
-	<template v-slot:solutionc>
-		We designed a conversational interface powered by Generative AI to analyze insurance policies and contracts, delivering clear, concise information to users. It identifies the most advantageous conditions when contracts overlap and can even promote relevant internal products based on conversation context.
-	</template>
-</featuredproject>
-
+					<featuredtext color="#7d81e"></featuredtext>
+					<template v-slot:title>Axel, the Gen AI Insurance assistant</template>
+					<template v-slot:clientc>
+						A national insurance company offering a range of products, including bank and home insurance, as well as a diverse service
+						portfolio.
+					</template>
+					<template v-slot:challengec>
+						Clients often lack awareness of their contract terms and conditions. During stressful situations, frustration grows due to
+						difficulty in quickly accessing personalized support from human assistants.
+					</template>
+					<template v-slot:solutionc>
+						We designed a conversational interface powered by Generative AI to analyze insurance policies and contracts, delivering clear,
+						concise information to users. It identifies the most advantageous conditions when contracts overlap and can even promote
+						relevant internal products based on conversation context.
+					</template>
+				</featuredproject>
 			</section>
 
 			<section class="scroll-section featuredproject" style="color: #54222b">
-				<featuredproject background="./vid/ePOD_Teaser.png">
+				<featuredproject background="./vid/ePOD_Teaser.mp4">
 					<template v-slot:title>ePOD</template>
 					<template v-slot:clientc
-						>Jean-Louis Étienne, a renowned French doctor and explorer, launched a project featuring a vertical boat and a 2024 South Pole expedition. The team aimed to create a website offering open-source data accessible to students and non-scientists.</template
+						>Jean-Louis Étienne, a renowned French doctor and explorer, launched a project featuring a vertical boat and a 2024 South Pole
+						expedition. The team aimed to create a website offering open-source data accessible to students and non-scientists.</template
 					>
 					<template v-slot:challengec
-						>To develop an interactive Digital Twin that explains the expedition to a broad audience through a 3D model, story paths, and live data streamed directly from the boat.</template
+						>To develop an interactive Digital Twin that explains the expedition to a broad audience through a 3D model, story paths, and
+						live data streamed directly from the boat.</template
 					>
 					<template v-slot:solutionc
-						>We delivered a sustainable solution with a Digital Twin designed to meet accessibility and usability standards, ensuring it resonated with a wide audience. Prioritizing a desktop-first approach added complexity but ensured a strong foundation for subsequent mobile designs.</template
+						>We delivered a sustainable solution with a Digital Twin designed to meet accessibility and usability standards, ensuring it
+						resonated with a wide audience. Prioritizing a desktop-first approach added complexity but ensured a strong foundation for
+						subsequent mobile designs.</template
 					>
 				</featuredproject>
 			</section>
@@ -118,6 +125,11 @@ onBeforeUnmount(() => {
 
 body {
 	transition: background-color 0.8s ease-in-out; /* Smooth transition */
+
+	.featuredvideo {
+		width: 100%;
+		border-radius: 0.5rem;
+	}
 }
 
 main {
@@ -131,7 +143,6 @@ main {
 		display: flex;
 		flex-direction: column;
 		overflow-y: scroll;
-    
 
 		.scroll-section {
 			scroll-snap-align: start; /* Snap each section to the top */
@@ -139,14 +150,13 @@ main {
 			flex-direction: column;
 			justify-content: center;
 			padding: 4rem;
-      @media (max-width: 1000px) {
-padding-top:5arem;
-    }
+			@media (max-width: 1000px) {
+				padding-top: 5arem;
+			}
 			// Avoid background-color in sections themselves so that body color takes over
 
-      
-      @media (max-width: 1000px) {
-        padding: 1rem;
+			@media (max-width: 1000px) {
+				padding: 1rem;
 				height: fit-content;
 			}
 		}

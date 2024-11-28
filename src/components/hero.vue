@@ -4,9 +4,9 @@
 		<h1 class="hero">Sara Jover's creative realm.</h1>
 
 		<br />
-		<h1 class="regular">Find here all about</h1>
-		<h1 class="hero">Digital Services & Media Production</h1>
-		<h1 class="hero"></h1>
+		<h1 class="regular">Get in touch to materialize</h1>
+		<h1 class="hero">Your ideas into digital</h1>
+		<h1 class="hero"> <b>products & assets</b></h1>
 	</div>
 </template>
 
@@ -36,12 +36,18 @@ div {
 	font-weight: 100;
 	letter-spacing: -0.2rem;
 
+
+
+
 	@media (max-width: 600px) {
 	}
 }
 
 .hero {
 	color: $yellow-400;
+	display: flex;
+			flex-wrap: wrap; /* Flex-wrap to manage how items are wrapped */
+	justify-content: center; /* Center content vertically */
 }
 
 </style>
