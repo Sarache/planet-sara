@@ -1,72 +1,91 @@
 <script setup>
-import { ref, onMounted, onBeforeUnmount, nextTick } from "vue"
-import hero from "@/components/hero.vue"
-import featuredproject from "@/components/featuredproject.vue"
-import Resume from "../components/resume.vue"
-import { useHead } from "@unhead/vue"
+import { ref, onMounted, onBeforeUnmount, nextTick } from "vue";
+import hero from "@/components/hero.vue";
+import featuredproject from "@/components/featuredproject.vue";
+import Resume from "../components/resume.vue";
+import { useHead } from "@unhead/vue";
 
 // SEO Setup
 useHead({
-	title: "✧ 𝓟𝓵𝓪𝓷𝓮𝓽 𝓢𝓪𝓻𝓪 ✧ Welcome aboard!",
-})
+  title: "✧ 𝓟𝓵𝓪𝓷𝓮𝓽 𝓢𝓪𝓻𝓪 ✧ Welcome aboard!",
+});
 
 // Background colors for sections
 const sections = [
-	{ backgroundColor: "#8c2138" }, // Hero section
-	{ backgroundColor: "#3a08b3" }, // First project
-	{ backgroundColor: "#c15544" }, // Second project
-	{ backgroundColor: "#f6ca6f" }, // Resume
-]
+  { backgroundColor: "#8c2138" }, // Hero section
+  { backgroundColor: "#3a08b3" }, // First project
+  { backgroundColor: "#c15544" }, // Second project
+  { backgroundColor: "#f6ca6f" }, // Resume
+];
 
-const sectionElements = ref([])
-const scrollContainer = ref(null)
+const sectionElements = ref([]);
+const scrollContainer = ref(null);
+const isScrollSnapEnabled = ref(window.innerWidth > 1000); // Dynamically track scroll snapping status
+
+// Adjust scroll snapping based on screen size
+const updateScrollSnap = () => {
+  isScrollSnapEnabled.value = window.innerWidth > 1000;
+
+  if (scrollContainer.value) {
+    scrollContainer.value.style.scrollSnapType = isScrollSnapEnabled.value
+      ? "y mandatory"
+      : "none";
+  }
+};
 
 // Handle scroll event to change background color
 const handleScroll = () => {
-	const scrollPosition = scrollContainer.value.scrollTop + window.innerHeight / 2
-	let activeSectionIndex = 0
+  const scrollPosition = scrollContainer.value.scrollTop + window.innerHeight / 2;
+  let activeSectionIndex = 0;
 
-	// Determine the active section based on scroll position
-	for (let i = 0; i < sectionElements.value.length; i++) {
-		const sectionTop = sectionElements.value[i].offsetTop
-		const sectionHeight = sectionElements.value[i].offsetHeight
+  // Determine the active section based on scroll position
+  for (let i = 0; i < sectionElements.value.length; i++) {
+    const sectionTop = sectionElements.value[i].offsetTop;
+    const sectionHeight = sectionElements.value[i].offsetHeight;
 
-		if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-			activeSectionIndex = i
-			break
-		}
-	}
+    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+      activeSectionIndex = i;
+      break;
+    }
+  }
 
-	// Set background color based on the active section
-	const newColor = sections[activeSectionIndex].backgroundColor
-	console.log("Setting background color to:", newColor)
+  // Set background color based on the active section
+  const newColor = sections[activeSectionIndex].backgroundColor;
 
-	// Smooth transition for background color
-	document.body.style.backgroundColor = newColor
-}
+  // Smooth transition for background color
+  document.body.style.backgroundColor = newColor;
+};
 
 onMounted(async () => {
-	await nextTick()
-	sectionElements.value = document.querySelectorAll(".scroll-section")
-	scrollContainer.value = document.querySelector(".scroll-container")
+  await nextTick();
+  sectionElements.value = document.querySelectorAll(".scroll-section");
+  scrollContainer.value = document.querySelector(".scroll-container");
 
-	if (!sectionElements.value.length) {
-		console.error("No sections found.")
-		return
-	}
+  if (!sectionElements.value.length) {
+    console.error("No sections found.");
+    return;
+  }
 
-	// Set the initial background color
-	document.body.style.backgroundColor = sections[0].backgroundColor
+  // Set the initial background color
+  document.body.style.backgroundColor = sections[0].backgroundColor;
 
-	// Add scroll event listener to the scroll container instead of window
-	scrollContainer.value.addEventListener("scroll", handleScroll)
-})
+  // Add scroll event listener
+  scrollContainer.value.addEventListener("scroll", handleScroll);
+
+  // Watch for resizing to update scroll snapping
+  window.addEventListener("resize", updateScrollSnap);
+
+  // Initialize scroll snapping
+  updateScrollSnap();
+});
 
 onBeforeUnmount(() => {
-	// Remove the scroll event listener
-	scrollContainer.value.removeEventListener("scroll", handleScroll)
-})
+  // Remove the scroll event listener
+  scrollContainer.value.removeEventListener("scroll", handleScroll);
+  window.removeEventListener("resize", updateScrollSnap);
+});
 </script>
+
 
 <template>
 	<main>
@@ -124,45 +143,43 @@ onBeforeUnmount(() => {
 @import "../assets/scss/_variables.scss";
 
 body {
-	transition: background-color 0.8s ease-in-out; /* Smooth transition */
-
-	.featuredvideo {
-		width: 100%;
-		border-radius: 0.5rem;
-	}
+  transition: background-color 0.8s ease-in-out; /* Smooth background transition */
 }
 
 main {
-	@media (max-width: 1000px) {
-		flex-direction: row;
-	}
+  .scroll-container {
+    scroll-snap-type: y mandatory; /* Snap sections for desktop */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
 
-	.scroll-container {
-		scroll-snap-type: y mandatory; /* Enables scroll snapping */
-		height: 100vh;
-		display: flex;
-		flex-direction: column;
-		overflow-y: scroll;
+    @media (max-width: 1000px) {
+      scroll-snap-type: none; /* Disable snapping for smaller screens */
+    }
 
-		.scroll-section {
-			scroll-snap-align: start; /* Snap each section to the top */
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			padding: 4rem;
-			@media (max-width: 1000px) {
-				padding-top: 5arem;
-			}
-			// Avoid background-color in sections themselves so that body color takes over
+    .scroll-section {
+      scroll-snap-align: start; /* Snap each section to the top on desktop */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 4rem;
+      height: 100vh;
 
-			@media (max-width: 1000px) {
-				padding: 1rem;
-				height: fit-content;
-			}
-		}
-		.resume {
-			padding: 6rem 0;
-		}
-	}
+      @media (max-width: 1000px) {
+        height: auto; /* Allow sections to expand naturally */
+        padding: 2rem; /* Adjust padding for smaller screens */
+      }
+    }
+
+    .resume {
+      padding: 6rem 0;
+
+      @media (max-width: 1000px) {
+        padding: 3rem 0;
+      }
+    }
+  }
 }
+
 </style>

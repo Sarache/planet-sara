@@ -44,82 +44,68 @@ export default {
 <style lang="scss" scoped>
 @import "../assets/scss/_variables.scss";
 
-@media (max-width: 1300px) {
-	.featuredcontent {
-		flex-direction: column; // Stack on smaller screens
-		height: 100%;
-
-		/* Style for video */
-
-		/* Style for image */
-		div {
-			width: 100%;
-			background-size: cover;
-			background-position: center;
-			border-radius: 0.5rem;
-		}
-
-		.featuredpicture {
-
-			width: 100%;
-			border-radius: 0.5rem;
-			overflow: hidden;
-			height: 100%;
-
-			.featuredvideo {
-
-				border-radius: 1rem;
-			}
-		}
-
-		.featuredtext {
-			width: 100%; // Full width on smaller screens
-			padding-left: 0; // Remove padding for mobile
-		}
-	}
-}
-
-subtitle {
-	@media (max-width: 1300px) {
-		padding-top: 4rem;
-	}
-}
-
-h1 {
-	padding-bottom: 2rem;
-	letter-spacing: -3.5pt;
-}
-
 .featuredcontent {
-	align-items: center;
 	display: flex;
-	flex-direction: row;
+	flex-direction: row; /* Default layout for larger screens */
+	align-items: center;
 	width: 100%;
 	height: 80vh;
 	gap: 2rem;
 
 	@media (max-width: 1300px) {
-		flex-direction: column;
+		flex-direction: column; /* Stack items for smaller screens */
+		height: auto; /* Allow height to adjust based on content */
+		gap: 1rem;
 	}
 
 	.featuredpicture {
+		flex: 2; /* Take 2/3 of space on larger screens */
 		width: 100%;
-		background-size: contain;
-		background-position: cover;
-		background-repeat: no-repeat;
 		border-radius: 0.5rem;
 		overflow: hidden;
+		position: relative;
+
+		// Video styling
+		video.featuredvideo {
+			width: 100%; /* Ensure video fills the container */
+			height: 100%; /* Maintain full container coverage */
+			object-fit: cover; /* Prevent stretching */
+		}
+
+		// Image styling (background)
+		&.is-image {
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			min-height: 300px; /* Ensure a minimum height for images */
+		}
 	}
 
 	.featuredtext {
+		flex: 1; /* Take 1/3 of space on larger screens */
 		display: flex;
 		flex-direction: column;
-		gap: 2rem;
-		width: 30%;
+		gap: 1rem;
+		padding: 1rem;
+		width: 40%; /* Constrain width on larger screens */
 
 		@media (max-width: 1300px) {
-			width: 100%;
-			height: 100%;
+			width: 100%; /* Full width on mobile */
+			padding: 0; /* Remove extra padding */
+		}
+
+		h4 {
+			font-size: 1.4rem;
+			margin-bottom: 0.5rem;
+		}
+
+		p {
+			font-size: 1rem;
+			line-height: 1.5; /* Improve text readability */
+
+			@media (max-width: 1300px) {
+				line-height: 1.1rem;
+			}
 		}
 
 		.button {
@@ -134,10 +120,15 @@ h1 {
 			font-weight: 700;
 			width: fit-content;
 			color: $off-white;
+			margin: 1rem auto 0; /* Center-align on mobile */
 
 			img {
 				width: 1.5rem;
-				rotate: 45deg;
+				transform: rotate(45deg); /* Adjust rotation */
+			}
+
+			@media (max-width: 1300px) {
+				margin: 1rem auto; /* Center-align button */
 			}
 		}
 	}
