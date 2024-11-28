@@ -92,7 +92,7 @@ onBeforeUnmount(() => {
 			</section>
 
 			<section class="scroll-section featuredproject" style="color: #54222b">
-				<featuredproject background="./img/ePOD_Featured.png">
+				<featuredproject background="./vid/ePOD_Teaser.png">
 					<template v-slot:title>ePOD</template>
 					<template v-slot:clientc
 						>Jean-Louis Étienne, a renowned French doctor and explorer, launched a project featuring a vertical boat and a 2024 South Pole expedition. The team aimed to create a website offering open-source data accessible to students and non-scientists.</template
