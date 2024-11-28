@@ -97,6 +97,9 @@ export default {
 		h4 {
 			font-size: 1.4rem;
 			margin-bottom: 0.5rem;
+						@media (max-width: 1300px) {
+				font-size: 1.1rem;
+			}
 		}
 
 		p {
