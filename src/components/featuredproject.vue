@@ -121,6 +121,7 @@ export default {
 			width: fit-content;
 			color: $off-white;
 			margin: 1rem auto 0; /* Center-align on mobile */
+			justify-content: center;
 
 			img {
 				width: 1.5rem;
@@ -129,6 +130,7 @@ export default {
 
 			@media (max-width: 1300px) {
 				margin: 1rem auto; /* Center-align button */
+				width: 100%;
 			}
 		}
 	}

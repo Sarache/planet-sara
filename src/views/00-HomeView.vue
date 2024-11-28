@@ -168,7 +168,7 @@ main {
 
       @media (max-width: 1000px) {
         height: auto; /* Allow sections to expand naturally */
-        padding: 2rem; /* Adjust padding for smaller screens */
+        padding: 1rem; /* Adjust padding for smaller screens */
       }
     }
 

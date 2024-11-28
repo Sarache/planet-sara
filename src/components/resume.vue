@@ -152,7 +152,7 @@
 		z-index: 3;
 
 		@media (max-width: 1000px) {
-			margin: 1rem -1rem 0;	}
+		}
 
 		body {
 			width: 100%;
