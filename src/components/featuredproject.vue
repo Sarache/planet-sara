@@ -47,6 +47,7 @@ export default {
 @media (max-width: 1300px) {
 	.featuredcontent {
 		flex-direction: column; // Stack on smaller screens
+		height: 100%;
 
 		/* Style for video */
 
@@ -59,12 +60,14 @@ export default {
 		}
 
 		.featuredpicture {
-			padding-top: 75%;
+
+			width: 100%;
 			border-radius: 0.5rem;
 			overflow: hidden;
+			height: 100%;
 
 			.featuredvideo {
-				width: 100%;
+
 				border-radius: 1rem;
 			}
 		}
