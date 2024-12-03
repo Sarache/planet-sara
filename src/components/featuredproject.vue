@@ -44,6 +44,12 @@ export default {
 <style lang="scss" scoped>
 @import "../assets/scss/_variables.scss";
 
+
+h1 {
+	@media (max-width: 500px) {
+padding: 1rem 0;
+	}
+}; 
 .featuredcontent {
 	display: flex;
 	flex-direction: row; /* Default layout for larger screens */
