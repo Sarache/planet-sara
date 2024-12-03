@@ -79,7 +79,6 @@ width: fit-content; // Only take space needed for content
 
 	@media (max-width: 1000px) {
 		gap: 0.2rem;
-		max-width: 90%;
     max-width: 100%; // Ensure responsiveness on smaller screens
 
 	}
@@ -93,14 +92,14 @@ width: fit-content; // Only take space needed for content
 	gap: 1rem;
 	color: $plum-dark;
 	margin: 0 3rem;
-	padding: .5rem 0 ;
+	padding: .75rem 0 ;
 
   	@media (max-width: 1000px) {
 		gap: 0.5rem;
 		width: 100%;
     overflow-x: scroll;
-
 		margin: 0 1rem;
+      justify-content: flex-start;
     }
 	li {
 		a {

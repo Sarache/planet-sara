@@ -5,8 +5,8 @@
 
 		<br />
 		<h1 class="regular">Get in touch to materialize</h1>
-		<h1 class="hero">Your ideas into digital</h1>
-		<h1 class="hero"> <b>products & assets</b></h1>
+		<h1 class="hero">Your ideas into</h1>
+		<h1 class="hero"> <b>websites and apps</b></h1>
 	</div>
 </template>
 
