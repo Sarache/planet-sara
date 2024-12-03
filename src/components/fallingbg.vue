@@ -40,12 +40,12 @@ const generateFallingObjects = () => {
 		{ src: "./img/doodles/Artboard13.png", sizeMultiplier: 1.2 },
 	]
 
-	const totalObjects = 10
+	const totalObjects = 8
 
-	const maxDelay = 10
+	const maxDelay = 15
 
 	const maxDuration = 30
-	const minDuration = 15
+	const minDuration = 5
 
 	const maxSize = 300
 	const minSize = 180

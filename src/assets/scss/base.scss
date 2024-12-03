@@ -378,7 +378,7 @@ menuitem {
 
 	width: 100%;
 	font-weight: 100;
-	letter-spacing: -3.5pt;
+	letter-spacing: -2.5pt;
 	font-family: Victor Mono;
 
 }
@@ -389,7 +389,7 @@ h1 {
 	font-style: italic;
 	font-weight: 100;
 	line-height: 4rem;
-	letter-spacing: -3.5pt;
+	letter-spacing: -2.5pt;
 	/* 114.286% */
 
 	@media (max-width: 600px) {
@@ -464,7 +464,9 @@ subtitle {
 @media screen and (max-width: $br-mobile) {
 	h1 {
 		font-size: 2rem;
-		line-height: 1.8rem;
+		line-height: 2.2rem;
+		letter-spacing: -2.5pt;
+		display: inline;
 	}
 
 	h2 {
