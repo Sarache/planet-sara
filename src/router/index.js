@@ -5,7 +5,7 @@ import HomeView from "../views/00-HomeView.vue"
 
 import PortfolioView from "../views/02-PortfolioView.vue"
 import PortfolioDetail from "../views/02.1-PortfolioDetail.vue"
-import AboutView from "../views/03-CreaPortfolioView.vue"
+import AboutView from "../views/01-AboutView.vue"
 import CreaPortfolioView from "../views/03-CreaPortfolioView.vue"
 
 
@@ -33,7 +33,7 @@ const router = createRouter({
     {
       path: "/liquidstudios",
       name: "Liquid Studios",
-      component: CreaPortfolioView,
+      component: AboutView,
       props: true,
     },
 

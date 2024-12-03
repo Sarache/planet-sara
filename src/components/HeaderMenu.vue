@@ -8,6 +8,16 @@
 					</router-link>
 				</menuitem>
 			</li>
+						<li>
+				<p>✦</p>
+			</li>
+
+			<li>
+				<menuitem>
+					<router-link to="/designportfolio">Portfolio</router-link>
+				</menuitem>
+			</li>
+
 
 			<li>
 				<p>✦</p>
@@ -31,7 +41,7 @@
 			</li>
 			<li>
 				<menuitem>
-					<router-link to="/Fanzie">Fanzie</router-link>
+					<router-link to="/fanzie">Fanzie</router-link>
 				</menuitem>
 			</li>
 			<li>
@@ -46,15 +56,7 @@
 	</div>
 </template>
 
-<script>
-export default {
-	computed: {
-		isSubmenuActive() {
-			return this.$route.path.startsWith("/about")
-		},
-	},
-}
-</script>
+<script></script>
 
 <style lang="scss" scoped>
 @import "../assets/scss/_variables.scss";
@@ -72,15 +74,14 @@ export default {
 	z-index: 5;
 	margin: 0;
 
-width: fit-content; // Only take space needed for content
+	width: fit-content; // Only take space needed for content
 	max-width: 90%; // Ensure responsiveness on smaller screens
 	overflow: hidden; // Prevent unintended overflow
 	white-space: nowrap; // Prevent text wrapping at all breakpoints
 
 	@media (max-width: 1000px) {
 		gap: 0.2rem;
-    max-width: 100%; // Ensure responsiveness on smaller screens
-
+		max-width: 100%; // Ensure responsiveness on smaller screens
 	}
 }
 
@@ -88,19 +89,19 @@ width: fit-content; // Only take space needed for content
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-  justify-content: center;
+	justify-content: center;
 	gap: 1rem;
 	color: $plum-dark;
 	margin: 0 3rem;
-	padding: .75rem 0 ;
+	padding: 0.75rem 0;
 
-  	@media (max-width: 1000px) {
+	@media (max-width: 1000px) {
 		gap: 0.5rem;
 		width: 100%;
-    overflow-x: scroll;
+		overflow-x: scroll;
 		margin: 0 1rem;
-      justify-content: flex-start;
-    }
+		justify-content: flex-start;
+	}
 	li {
 		a {
 			font-family: Red Hat Mono;
