@@ -124,7 +124,7 @@ export default {
 			width: fit-content;
 			color: $off-white;
 			margin: 1rem auto 0; /* Center-align on mobile */
-			just: center;
+justify-content: center;
 
 			img {
 				width: 1.5rem;

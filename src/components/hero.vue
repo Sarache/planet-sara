@@ -25,6 +25,7 @@ div {
 
 	@media (max-width: 1000px) {
 		padding: 0;
+		text-align: center;
 	}
 }
 
