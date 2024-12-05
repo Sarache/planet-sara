@@ -99,7 +99,6 @@
 		gap: 0.5rem;
 		width: 100%;
 		overflow-x: scroll;
-		margin: 0 1rem;
 		justify-content: flex-start;
 	}
 	li {

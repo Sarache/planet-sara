@@ -12,10 +12,15 @@
 					</div>
 				</div>
 			</div>
-			<div class="project-bg" :style="{ backgroundImage: `url(${project.imageUrl})` }"></div>
+			<div
+				class="project-bg"
+				:style="{ backgroundImage: `url(${project.imageUrl || '/default/image.png'})` }"
+				:aria-label="project.title"
+			></div>
 		</div>
 	</router-link>
 </template>
+
 
 <script>
 export default {

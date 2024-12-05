@@ -5,8 +5,8 @@ import HomeView from "../views/00-HomeView.vue"
 
 import PortfolioView from "../views/02-PortfolioView.vue"
 import PortfolioDetail from "../views/02.1-PortfolioDetail.vue"
-import AboutView from "../views/01-AboutView.vue"
-import CreaPortfolioView from "../views/03-CreaPortfolioView.vue"
+import LiquidStudios from "../views/01-LiquidStudios.vue"
+import Nicecactus from "../views/02-Nicecactus.vue"
 
 
 const router = createRouter({
@@ -24,30 +24,32 @@ const router = createRouter({
       component: PortfolioView,
       props: true,
     },
-    /* {
+
+
+    {
       path: "/portfolio/:label",
       name: "portfolioitem",
       component: PortfolioDetail,
       props: true,
-    }, */
+    },
     {
       path: "/liquidstudios",
       name: "Liquid Studios",
-      component: AboutView,
+      component: LiquidStudios,
       props: true,
     },
 
     {
       path: "/nicecactus",
       name: "nicecactus",
-      component: PortfolioDetail,
+      component: Nicecactus,
       props: true,
     },
 
     {
       path: "/fanzie",
       name: "Fanzie",
-      component: AboutView,
+      component: PortfolioView,
       props: true,
     },
   ],

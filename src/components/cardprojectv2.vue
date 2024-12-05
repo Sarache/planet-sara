@@ -2,8 +2,9 @@
 	<router-link :to="{ name: 'portfolioitem', params: { label: project.label } }" class="project-link">
 		<div class="project">
 			<div class="project-overlay">
-				<h6>{{ project.title }}</h6>
-				<div class="description">{{ project.description }}</div>
+                <div class="project-header">
+				<subtitle>{{ project.title }}</subtitle>
+            <div class="project-header-icons"><img class="icon" src="/public/img/pixel-maximize.svg"><img class="icon" src="/public/img/pixel-minimize.svg"><img class="icon" src="/public/img/pixel-close.svg"></div></div>
 				<div class="scroller">
 					<div class="tag-container scroller__inner">
 						<div class="tags" v-for="tag in project.tags" :key="tag">
@@ -69,10 +70,6 @@ export default {
 		max-width: 100%;
 	}
 
-	@media (min-width: 1600px) {
-		flex: 1 1 calc(32% - 2rem); // Two projects per row with gap
-		max-width: calc(32% - 2rem);
-	}
 }
 
 .project {
@@ -86,7 +83,7 @@ export default {
 	z-index: 4;
 	height: 20rem; /* Set a fixed height for the card */
 	max-width: 100%; /* Ensure the card doesn't expand beyond its parent */
-	mix-blend-mode: luminosity;
+    border: 2px solid $off-black;
 
 	&:hover .project-bg {
 		opacity: 1;
@@ -95,19 +92,53 @@ export default {
 		background-size: 110%;
 		transition: background-size 0.5s, opacity 0.2s, filter 1s;
 	}
+.project-header {
+display: flex;
+flex-direction: row;
+padding: 0 0 0 .75rem ;
+gap: 0;
+background-color: $off-white;
 
-	h6 {
+
+    	subtitle {
 		color: $off-black;
 		transition: font-size 0.5s;
-		position: absolute;
-		top: 2rem;
-		left: 2rem;
-		right: 2rem;
+        width: 100%;
+        padding:.5rem 0 .75rem ;
+	}
+.project-header-icons {
+display: flex;
+gap:-2px;
+height :1.5rem;
+height: 100%;
+
+
+.icon{
+border-left: 2px solid $off-black;
+padding: .5rem;
+width: 2.5rem;
+img {
+    color: red;
+}
+
+};
+
+
+}
+
+}
+
+	&:hover .project-overlay .project-header {
+background-color: $off-black;
+mix-blend-mode: exclusion;
+		transition: background-color 0.5s;
 	}
 
-	&:hover .project-overlay h6 {
-		font-size: 2rem; // Change to desired font size
-		transition: font-size 1s;
+    	&:hover .project-overlay .project-header .icon {
+		color: $off-white;
+	}
+
+	&:hover .project-overlay subtitle {
 		height: 100%;
 		color: $off-white;
 		mix-blend-mode: exclusion;
@@ -117,22 +148,8 @@ export default {
 		-webkit-text-fill-color: $yellow-400;
 	}
 
-	.description {
-		color: $off-black;
-		position: absolute;
-		top: 6rem;
-		left: 2rem;
-		right: 2rem;
-		transition: opacity 0.5s;
-		line-height: 1.2;
-		font-family: "Red Hat Mono";
-		font-weight: regular;
-		font-size: 1.2rem;
-		text-rendering: optimizeLegibility;
-		-webkit-font-smoothing: antialiased;
-		-moz-osx-font-smoothing: grayscale;
-		height: 100%;
-	}
+
+
 
 	&:hover .project-overlay .description {
 		opacity: 0;
@@ -156,18 +173,18 @@ export default {
 		height: 100%;
 		left: 0;
 		top: 0;
-		opacity: 0.1;
+		opacity: 0.6;
 		background: center center/cover no-repeat;
 		background-blend-mode: luminosity;
 		background-size: 120%;
-		filter: blur(16px);
+		filter: blur(8px);
+        filter: grayscale(20%);
 		z-index: -1; // Places background behind content
 		transition: background-size 1s, opacity 1s, filter 1s;
 	}
 	.scroller {
-		margin-top: auto;
-		bottom: 0.5rem;
-		left: 0rem;
+		top: -1.5rem;
+		left: 0;
 		right: 2rem;
 		background: $off-black;
 		overflow: hidden;
